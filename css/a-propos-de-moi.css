@@ -1,0 +1,83 @@
+.profile-icon{
+    width: 10em;
+    margin-inline: 10%;
+    margin-top: 3em;
+    position: relative;
+    float: left; /* L'image flotte à gauche */
+    margin-right: 15px; /* Un espace entre l'image et le texte */
+}
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    .profile-icon {
+        width: 10vw; /* Ajuster la taille pour les petits écrans */
+        width: 20%;
+    }
+}
+.profile-text{
+    color: #1B1464; /* Couleur du texte */
+    font-size: 1.5em;
+    text-align: left;
+    margin-top: 3em;
+}
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    .profile-text {
+        width: 60vw; /* Ajuster la taille pour les petits écrans */
+        font-size: 110%;
+        text-align: left;
+        margin-left: 35%;
+    }
+}
+table {
+    background-color: white;
+    margin-left: auto;  /* Centrer horizontalement */
+    margin-right: auto;
+    margin-top: 5em;
+    border-collapse: collapse;
+    border: 0em solid rgb(140, 140, 140);
+    font-family: 'Arial', Times, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    width: 90%; /* Utilise 90% de l'espace disponible pour plus de fluidité */
+    overflow-x: auto; 
+    border-radius: 15px;
+    border-color: #1B1464;
+}
+table:hover {
+    box-shadow: 0 3em 15em #1b1464c0;
+    transform: scale(1.05); /* Agrandit la table de 5% au survol */
+}
+th,
+td {
+    padding: 0.5em 2em; /* Réduire légèrement la taille du padding */
+    text-align: center; /* Centre le contenu horizontalement */
+    margin: 0;
+    color: #1B1464; /* Couleur du texte */
+    font-size: 1.2em;
+    vertical-align: middle; 
+}
+
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    table {
+        width: 100%; /* Prend tout l'espace sur petits écrans */
+        margin-top: 2em; /* Ajuste l'espacement vertical */
+    }
+
+    th, td {
+        padding: 0.5em 0.25em; /* Réduire le padding pour petits écrans */
+        font-size: 1em; /* Diminuer la taille du texte */
+        letter-spacing: 0.15em;
+    }
+}
+
+.th-img {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(69%) saturate(1700%) hue-rotate(8deg); /* Filtre orange */
+    display: block;
+    margin: 0 auto;
+    width: 3em; /* Ajuste la taille de l'image */
+    height: auto;
+}
+
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    .th-img {
+        width: 2em; /* Ajuste la taille de l'image pour petits écrans */
+    }
+}

@@ -1,0 +1,127 @@
+/* Effet background */
+body {
+    background-color: #f4f4f4;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'Arial', Times, serif;
+}
+html, body {
+    height: 100%; /* S'assure que le corps occupe toute la hauteur de la fenêtre */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les remplissages par défaut */
+}
+/* Bannière en bleu foncé */
+header {
+    background: linear-gradient(90deg, #1B1464, #0652DD); /* Dégradé de bleu foncé à bleu clair */
+    text-align: center;
+}
+/* Pour le reste du CSS */
+.icon {
+    width: 2vw; /* Largeur relative à la taille de la fenêtre */
+    max-width: 5em; /* Largeur maximale */
+    margin-left: 0.5em;
+    vertical-align: middle; /* Alignement central de l'icône */
+    display: inline-block;
+}
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    .icon {
+        width: 10vw; /* Ajuster la taille pour les petits écrans */
+        max-width: 1em; /* Ajuster la largeur maximale */
+    }
+}
+/* Style pour les boutons de navigation */
+.nav-buttons .btn {
+    color: rgb(255, 255, 255); /* Couleur du texte */
+    width: 2vw; /* Largeur relative à la taille de la fenêtre */
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    .nav-buttons .btn {
+        width: 0vw; /* Ajuster la taille pour les petits écrans */
+        font-size: 0.9em;
+    }
+}
+.select-page {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(69%) saturate(1700%) hue-rotate(8deg);
+    width: 2vw; /* Largeur relative à la taille de la fenêtre */
+    max-width: 5em; /* Largeur maximale */
+    margin-left: 0.5em;
+    vertical-align: middle; /* Alignement central de l'icône */
+    display: inline-block;
+}
+@media (max-width: 600px) {
+    .select-page {
+        width: 10vw; /* Ajuster la taille pour les petits écrans */
+        max-width: 1em; /* Ajuster la largeur maximale */
+    }
+}
+
+/* Changement de couleur au survol */
+.nav-buttons .btn:hover {
+    color: #E1A624; /* Changer la couleur du texte en noir pour le contraste */
+}
+
+/* Changer la couleur de l'icône au survol du bouton */
+/* Changer la couleur de l'icône au survol du bouton */
+.nav-buttons .btn:hover .icon {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(69%) saturate(1700%) hue-rotate(8deg); /* Appliquer un filtre pour obtenir une couleur orange spécifique */
+}
+
+.page-title{
+    font-family: 'Arial', Times, serif;
+    color: #1B1464; /* Couleur du texte */
+    text-shadow: 0em 0.108em #0652DD;
+    font-size: 200%;
+    margin-left: 6%;
+    margin-top: 0.1em;
+}
+.page-text{
+    color: #1B1464; /* Couleur du texte */
+    font-size: 1.5em;
+    margin-left: 10%;
+    margin-top: 2em;
+    text-align: left;
+}
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    .page-text {
+        font-size: 1em; /* Ajuste la taille de l'image pour petits écrans */
+        margin-top: 0.1em;
+        margin-left: 5%;
+    }
+}
+.spartlogo {
+    width: 20em; /* Largeur relative à la largeur du header */
+    max-width: 4.4em; /* Largeur maximale */
+    height: 100%; /* Maintient les proportions de l'image */
+    top: 0; /* Aligne en haut */
+    left: 0; /* Aligne à gauche */
+    margin: 0; /* Retire les marges */
+    position: absolute; /* Positionnement absolu pour un placement précis */
+}
+@media (max-width: 800px) {
+    .spartlogo {
+        width: 0vw; /* Ajuster la taille pour les petits écrans */
+    }
+}
+header {
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    justify-content: space-between; /* Espace entre le logo et le titre */
+    padding: 1em; /* Ajoutez du remplissage autour du header */
+    position: relative;
+}
+.footer {
+    position: fixed; /* Position fixe par rapport à la fenêtre */
+    bottom: 0; /* Colle au bas de la fenêtre */
+    left: 0; /* Aligne à gauche */
+    right: 0; /* Aligne à droite */
+    text-align: center; /* Centre le texte */
+    padding: 10px; /* Espace autour du texte */
+    background-color: rgba(0, 0, 0, 0.192); /* Fond semi-transparent */
+    color: white; /* Couleur du texte */
+    font-size: 14px; /* Taille de la police ajustée */
+    z-index: 1000; /* Priorité d'affichage élevée */
+}

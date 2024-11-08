@@ -1,0 +1,109 @@
+/* EFFET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E1A624;
+  }
+  
+  .text span {
+    font-weight: bold;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #fff;
+    animation: zoomup 5s linear infinite;
+    animation-delay: calc(200ms * var(--i));
+  }
+  @media (max-width: 600px) {
+    .text span {
+        font-size: 2em; /* Taille de police minimale pour les petits écrans */
+    }
+}
+@keyframes zoomup {
+  0%,
+  100% {
+      color: #E1A624;
+      filter: blur(1px);
+      text-shadow: 0 0 10px #E1A624, 0 0 20px #E1A624, 0 0 30px #E1A624,
+          0 0 40px #E1A624, 0 0 60px #E1A624, 0 0 80px #E1A624, 0 0 100px #E1A624,
+          0 0 120px #E1A624;
+  }
+
+  5%,
+  95% {
+      filter: blur(0);
+      color: #fff;
+      text-shadow: none;
+  }
+}
+
+/* Ajouter une classe pour les groupes de lettres */
+.text span:nth-child(3n-2), /* 1ère lettre du groupe */
+.text span:nth-child(3n-1), /* 2ème lettre du groupe */
+.text span:nth-child(3n) { /* 3ème lettre du groupe */
+  animation-delay: calc(300ms * var(--i) / 2); /* Réduire le délai */
+}
+
+body.home-page {
+    background-image: url("../images/background.png"); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* Pour couvrir tout l'arrière-plan */
+    background-position: center; /* Pour centrer l'image */
+    background-repeat: no-repeat; /* Pour éviter que l'image se répète */
+}
+body.home-page::before {
+    content: none;
+    position: absolute; /* Positionnement absolu par rapport au body */
+    top: 0; /* Aligne en haut */
+    left: 0; /* Aligne à gauche */
+    right: 0; /* Aligne à droite */
+    bottom: 0; /* Aligne en bas */
+    background: rgba(0, 0, 0, 0.255); /* Couleur noire semi-transparente pour l'effet vignette */
+    margin-top: 4.5em;
+    pointer-events: none; /* Permet de cliquer à travers le vignette */
+}
+.blur-background {
+  position: relative; /* Nécessaire pour le flou */
+  padding: 1%; /* Espace autour du texte */
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centre le texte */
+  font-size: 80%;
+}
+@media (max-width: 600px) {
+  .blur-background {
+    font-size: 60%;
+  }
+}
+.blur-background::before {
+  content: ""; /* Nécessaire pour créer l'élément pseudo */
+  position: absolute; /* Position absolue par rapport à .blur-background */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1b146486; /* Couleur de fond avec transparence */
+  filter: blur(1em); /* Appliquer le flou */
+  z-index: -1; /* Place cet élément derrière le texte */
+}
+.centered-text {
+  text-align: center; /* Centre le texte dans le conteneur */
+  z-index: 10; /* Assure que le texte est au-dessus de l'image */
+  margin-top: 15%; /* Espace entre la bannière et le texte */
+  font-size: 125%;
+}
+h1{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

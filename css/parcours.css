@@ -1,0 +1,121 @@
+.button-9 {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #1B1464;
+    border-radius: 10px;
+    border-width: 0;
+    background: linear-gradient(90deg, #1B1464, #0652DD);
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Arial', Times, serif;
+    font-size: 1em;
+    text-align: center;
+    user-select: none;
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex; /* Pour activer le centrage */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    margin-top: 1em;
+}
+
+.button-9:focus {
+    box-shadow: rgba(93, 50, 56, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, #E1A624 0 0 0 4px;
+}
+
+/* Media Queries pour rendre le bouton responsive */
+@media (max-width: 600px) {
+    .button-9 {
+        width: 80%; /* Réduit la largeur à 80% sur les tablettes */
+        font-size: 0.9em; /* Ajuste légèrement la taille de la police */
+        margin-top: 2em;
+    }
+}
+body {
+    font-family: 'Arial', Times, serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+.experience {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 5em;
+    margin-right: 5em;
+    box-shadow: none; /* Retire l'ombre au survol */
+    border-radius: 15px; /* Arrondit davantage les coins */
+}
+
+.experience:hover {
+    box-shadow: 0 3em 15em #1b1464c0;
+    transform: scale(1.05); /* Agrandit la box de 5% au survol */
+}
+
+.experience h2 {
+    margin: 0;
+    color: #1B1464;
+}
+.experience p {
+    margin: 5px 0;
+}
+.date {
+    font-style: italic;
+    color: #777;
+}
+.h2 {
+    font-family: 'Arial', Times, serif;
+    display: flex;
+    align-items: center; /* Aligne verticalement l'image avec le texte */
+}
+.image{
+    margin-left: 17em; /* Espace entre le texte et l'image */
+    width: 3em;
+    vertical-align: left; /* Aligne l'image verticalement avec le texte */
+    margin-top: -40px; /* Ajustez cette valeur pour centrer verticalement */
+}
+/* Réinitialisation de base */
+h1 {
+    font-family: 'Arial', Times, serif;
+    font-size: 2rem;
+    color: #1B1464;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 1em auto;
+    padding: 10px;
+}
+
+.timeline article {
+    background-color: #fff;
+    padding: 4px;
+    margin-bottom: 10px;
+    border-left: 5px solid #0652DD;
+    border-radius: 15px;
+    box-shadow: none; /* Retire l'ombre au survol */
+}
+.timeline article:hover {
+    box-shadow: 0 3em 15em #1b1464c0;
+    transform: scale(1.05); /* Agrandit la box de 5% au survol */
+}
+
+h2 {
+    color: #0652DD;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}

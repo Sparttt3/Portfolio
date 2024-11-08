@@ -1,0 +1,21 @@
+.h1{
+    text-align: center;
+}
+p {
+    background-color: white;
+    font-family: 'Arial', Times, serif;
+    font-size: 1.3em;
+    margin-left: 10%; /* Ajustement en pourcentage */
+    text-align: left;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    max-width: 80%; /* Limite la largeur du paragraphe */
+}
+.image-uniforme {
+    margin-top: 0.5em;
+    margin-left: 8em;
+    width: 200px; /* Largeur désirée */
+    height: 100px; /* Hauteur désirée */
+    object-fit: contain; /* Ajuste l'image sans la déformer */
+}
