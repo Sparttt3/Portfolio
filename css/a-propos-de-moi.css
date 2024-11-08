@@ -1,7 +1,7 @@
 .profile-icon{
     width: 10em;
     margin-inline: 10%;
-    margin-top: 3em;
+    margin-top: 2em;
     position: relative;
     float: left; /* L'image flotte à gauche */
     margin-right: 15px; /* Un espace entre l'image et le texte */
@@ -27,34 +27,43 @@
     }
 }
 table {
-    background-color: white;
-    margin-left: auto;  /* Centrer horizontalement */
-    margin-right: auto;
-    margin-top: 5em;
+    background: linear-gradient(90deg, #1B1464, #0652DD);
+    margin: 5em auto 0 auto;  /* Centrage horizontal et espacement en haut */
     border-collapse: collapse;
-    border: 0em solid rgb(140, 140, 140);
     font-family: 'Arial', Times, serif;
     font-size: 0.8rem;
     letter-spacing: 0.25em;
-    width: 90%; /* Utilise 90% de l'espace disponible pour plus de fluidité */
-    overflow-x: auto; 
+    width: 90%; /* Utilise 90% de l'espace disponible */
+    overflow-x: auto;
     border-radius: 15px;
-    border-color: #1B1464;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
 }
 table:hover {
-    box-shadow: 0 3em 15em #1b1464c0;
     transform: scale(1.05); /* Agrandit la table de 5% au survol */
+    box-shadow: 
+    rgba(93, 50, 56, 0.1) 0 0 0 1px inset, 
+    rgba(50, 50, 93, .2) 0 6px 15px, 
+    rgba(0, 0, 0, .1) 0 2px 2px, 
+    #E1A624 0 0 0 4px;
+    text-shadow: 
+    0 0 15px #E1A624, 
+    0 0 25px #E1A624, 
+    0 0 35px #E1A624,
+    0 0 45px #E1A624, 
+    0 0 65px #E1A624, 
+    0 0 85px #E1A624, 
+    0 0 105px #E1A624, 
+    0 0 125px #E1A624;
 }
 th,
 td {
     padding: 0.5em 2em; /* Réduire légèrement la taille du padding */
     text-align: center; /* Centre le contenu horizontalement */
     margin: 0;
-    color: #1B1464; /* Couleur du texte */
+    color: white; /* Couleur du texte */
     font-size: 1.2em;
     vertical-align: middle; 
 }
-
 @media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
     table {
         width: 100%; /* Prend tout l'espace sur petits écrans */

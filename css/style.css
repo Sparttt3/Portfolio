@@ -28,23 +28,6 @@ header {
         max-width: 1em; /* Ajuster la largeur maximale */
     }
 }
-/* Style pour les boutons de navigation */
-.nav-buttons .btn {
-    color: rgb(255, 255, 255); /* Couleur du texte */
-    width: 2vw; /* Largeur relative à la taille de la fenêtre */
-    padding: 1%;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1em;
-    transition: background-color 0.3s, color 0.3s;
-}
-@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
-    .nav-buttons .btn {
-        width: 0vw; /* Ajuster la taille pour les petits écrans */
-        font-size: 0.9em;
-    }
-}
 .select-page {
     filter: brightness(0) saturate(100%) invert(62%) sepia(69%) saturate(1700%) hue-rotate(8deg);
     width: 2vw; /* Largeur relative à la taille de la fenêtre */
@@ -55,16 +38,43 @@ header {
 }
 @media (max-width: 600px) {
     .select-page {
+        filter: brightness(0) saturate(100%) invert(62%) sepia(69%) saturate(1700%) hue-rotate(8deg);
         width: 10vw; /* Ajuster la taille pour les petits écrans */
         max-width: 1em; /* Ajuster la largeur maximale */
     }
 }
-
+/* Style pour les boutons de navigation */
+.nav-buttons .btn {
+    color: rgb(255, 255, 255); /* Couleur du texte */
+    width: 2vw; /* Largeur relative à la taille de la fenêtre */
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+}
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    .nav-buttons .btn {
+        width: 0vw; /* Ajuster la taille pour les petits écrans */
+        font-size: 0.9em;
+    }
+}
 /* Changement de couleur au survol */
 .nav-buttons .btn:hover {
     color: #E1A624; /* Changer la couleur du texte en noir pour le contraste */
 }
-
+.select-btn{
+    color: #E1A624; /* Changer la couleur du texte en noir pour le contraste */
+    width: 2vw; /* Largeur relative à la taille de la fenêtre */
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    text-shadow: 0 0 15px #E1A624, 0 0 25px #E1A624, 0 0 35px #E1A624,
+    0 0 45px #E1A624, 0 0 65px #E1A624, 0 0 85px #E1A624, 0 0 105px #E1A624,
+    0 0 125px #E1A624;
+}
 /* Changer la couleur de l'icône au survol du bouton */
 /* Changer la couleur de l'icône au survol du bouton */
 .nav-buttons .btn:hover .icon {
@@ -79,6 +89,12 @@ header {
     margin-left: 6%;
     margin-top: 0.1em;
 }
+@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+    .page-title {
+        margin-top: 0.2em;
+        font-size: 150%;
+    }
+}
 .page-text{
     color: #1B1464; /* Couleur du texte */
     font-size: 1.5em;
@@ -86,10 +102,10 @@ header {
     margin-top: 2em;
     text-align: left;
 }
-@media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
+@media (max-width: 800px) { /* Pour les écrans jusqu'à 600px de large */
     .page-text {
         font-size: 1em; /* Ajuste la taille de l'image pour petits écrans */
-        margin-top: 0.1em;
+        margin-top: 0em;
         margin-left: 5%;
     }
 }

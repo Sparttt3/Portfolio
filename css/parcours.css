@@ -20,13 +20,26 @@
 }
 
 .button-9:focus {
-    box-shadow: rgba(93, 50, 56, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, #E1A624 0 0 0 4px;
+    box-shadow: 
+        rgba(93, 50, 56, 0.1) 0 0 0 1px inset, 
+        rgba(50, 50, 93, .2) 0 6px 15px, 
+        rgba(0, 0, 0, .1) 0 2px 2px, 
+        #E1A624 0 0 0 4px;
+    text-shadow: 
+    0 0 15px #E1A624, 
+    0 0 25px #E1A624, 
+    0 0 35px #E1A624,
+    0 0 45px #E1A624, 
+    0 0 65px #E1A624, 
+    0 0 85px #E1A624, 
+    0 0 105px #E1A624, 
+    0 0 125px #E1A624;
 }
 
 /* Media Queries pour rendre le bouton responsive */
 @media (max-width: 600px) {
     .button-9 {
-        width: 80%; /* Réduit la largeur à 80% sur les tablettes */
+        margin-top: 0em;
         font-size: 0.9em; /* Ajuste légèrement la taille de la police */
         margin-top: 2em;
     }
@@ -40,19 +53,23 @@ body {
 .experience {
     background-color: #fff;
     padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
     border-radius: 5px;
     margin-left: 5em;
     margin-right: 5em;
     box-shadow: none; /* Retire l'ombre au survol */
     border-radius: 15px; /* Arrondit davantage les coins */
 }
-
 .experience:hover {
     box-shadow: 0 3em 15em #1b1464c0;
     transform: scale(1.05); /* Agrandit la box de 5% au survol */
 }
-
+@media (max-width: 900px) {
+    .experience {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
 .experience h2 {
     margin: 0;
     color: #1B1464;
