@@ -86,7 +86,7 @@ header {
     color: #1B1464; /* Couleur du texte */
     text-shadow: 0em 0.108em #0652DD;
     font-size: 200%;
-    margin-left: 6%;
+    margin-left: 10%;
     margin-top: 0.1em;
 }
 @media (max-width: 600px) { /* Pour les écrans jusqu'à 600px de large */
@@ -96,6 +96,8 @@ header {
     }
 }
 .page-text{
+    font-family: 'Arial', Times, serif;
+
     color: #1B1464; /* Couleur du texte */
     font-size: 1.5em;
     margin-left: 10%;

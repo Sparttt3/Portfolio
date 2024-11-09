@@ -4,10 +4,12 @@
     background-color: #1B1464;
     border-radius: 10px;
     border-width: 0;
+    padding: 20px;
     background: linear-gradient(90deg, #1B1464, #0652DD);
     color: #fff;
     cursor: pointer;
     font-family: 'Arial', Times, serif;
+
     font-size: 1em;
     text-align: center;
     user-select: none;
