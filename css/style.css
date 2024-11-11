@@ -83,8 +83,8 @@ header {
 
 .page-title{
     font-family: 'Arial', Times, serif;
-    color: #1B1464; /* Couleur du texte */
-    text-shadow: 0em 0.108em #0652DD;
+    color: #0652DD; /* Couleur du texte */
+    text-shadow: 0em 0.10em #1B1464;
     font-size: 200%;
     margin-left: 10%;
     margin-top: 0.1em;
@@ -97,7 +97,6 @@ header {
 }
 .page-text{
     font-family: 'Arial', Times, serif;
-
     color: #1B1464; /* Couleur du texte */
     font-size: 1.5em;
     margin-left: 10%;
@@ -138,7 +137,7 @@ header {
     right: 0; /* Aligne à droite */
     text-align: center; /* Centre le texte */
     padding: 10px; /* Espace autour du texte */
-    background-color: rgba(0, 0, 0, 0.192); /* Fond semi-transparent */
+    background-color: rgba(0, 0, 0, 0.404); /* Fond semi-transparent */
     color: white; /* Couleur du texte */
     font-size: 14px; /* Taille de la police ajustée */
     z-index: 1000; /* Priorité d'affichage élevée */
