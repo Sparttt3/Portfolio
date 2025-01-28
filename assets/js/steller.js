@@ -14,19 +14,21 @@
 
 // smooth scroll
 $(document).ready(function(){
-	$(".nav-link").on('click', function(event) {
+    $(".nav-link, .btn.btn-primary.rounded.ml-4").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            
+            var hash = this.hash;
+            var headerHeight = $(".nav-link").outerHeight(); // Ajustez selon l'élément de votre en-tête
+            var targetPosition = $(hash).offset().top - headerHeight;
 
-    	if (this.hash !== "") {
-
-			event.preventDefault();
-
-			var hash = this.hash;
-
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			}, 700, function(){
-				window.location.hash = hash;
-			});
-      	} 
+            // Animation du défilement
+            $('html, body').animate({
+                scrollTop: targetPosition
+            }, 700, function(){
+                // Modifier l'URL sans téléporter la page
+                window.history.pushState(null, null, hash);
+            });
+        } 
     });
 });
