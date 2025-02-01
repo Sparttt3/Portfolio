@@ -1,0 +1,78 @@
+/* Container principal */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Style du conteneur des cartes */
+.container_cert {
+    display: flex;
+    justify-content: flex-start; /* Aligne les éléments à gauche par défaut */
+    gap: 20px; /* Espace entre les cartes */
+    padding: 20px;
+    flex-wrap: wrap; /* Permet aux cartes de s'organiser en lignes si nécessaire */
+    transition: justify-content 0.3s ease; /* Transition pour l'alignement */
+}
+
+/* Classe qui centre les cartes lorsqu'elle est ajoutée */
+.container_cert.centered {
+    justify-content: center; /* Centre les cartes horizontalement */
+}
+.cardcert:hover {
+    transform: scale(1.05); /* Agrandit la carte de 5% */
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+
+/* Style des cartes */
+.cardcert {
+    background: #252533;
+    padding: 15px;
+    width: 150px; /* Largeur fixe pour chaque carte */
+    height: auto; /* Hauteur auto pour ajuster la taille selon le contenu */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: block; /* Affiche chaque carte normalement */
+    flex: 0 1 auto;
+    opacity: 0; /* Masque par défaut */
+    transition: opacity 0.3s ease; /* Ajoute une transition douce */
+}
+.cardcert.show {
+    opacity: 1; /* Affiche les cartes lorsqu'elles ont la classe show */
+}
+
+/* Style des images des cartes */
+.cardcert img {
+    width: 80px; /* Taille de l'image */
+    height: 80px; /* Taille de l'image */
+    object-fit: cover; /* L'image remplira le carré sans déformer */
+    border-radius: 10px; /* Coins arrondis pour l'image elle-même (si désiré) */
+}
+
+/* Style des titres des cartes */
+.cardcert h3 {
+    color: white;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Style des boutons du menu */
+.menu button {
+    background: #252533;
+    border: none;
+    padding: 0.65rem 0.9rem;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: background 0.3s ease;
+}
+
+/* Effet au survol des boutons */
+.menu button:hover {
+    background: var(--orange);
+}

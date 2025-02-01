@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Steller landing page.">
     <meta name="author" content="Devcrud">
-    <title>Portfolio Paris Steevy Accueil</title>
+    <title>Portfolio Paris Steevy</title>
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="assets/css/steller.css">
+    <link rel="stylesheet" href="assets/css/certification.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="accueil">
     <!-- Page navigation -->
@@ -49,9 +52,9 @@
     <header class="header">
         <div class="container">
             <div class="infos">
-                <h6 class="subtitle">Bienvenue sur le portfolio de</h6>
+                <h6 class="subtitle">Bienvenue sur mon portfolio</h6>
                 <h6 class="title">Paris Steevy</h6>
-                <p>Étudiant en BTS-SIO</p>
+                <h6 class="subtitle">Étudiant en BTS SIO - Option SISR</h6>
                 <div class="buttons pt-3">
                     <button class="btn btn-dark rounded">TÉLÉCHARGER MON CV</button>
                 </div>
@@ -72,7 +75,7 @@
     <!-- About section -->
     <section id="about" class="section mt-3">
         <div class="text-center">
-            <h2 class="orange-text-bar text-center">À PROPOS DE MOI 🧰</h2></div><br>
+            <h2 class="orange-text-bar text-center">À PROPOS DE MOI 👩‍💻</h2></div><br>
         <div class="container mt-5">
             <div class="row text-center text-md-left">
                 <div class="col-md-3">
@@ -80,15 +83,15 @@
                 </div>
                 <div class="pl-md-4 col-md-9">
                     <h6 class="title">Steevy Paris</h6>
-                    <p>🏫 Actuellement étudiant en BTS SIO (Services Informatiques aux Organisations), spécialité SISR (Solutions d'Infrastructure, Systèmes et Réseaux), au Lycée Édouard Gand à Amiens, je me forme à des compétences clés en gestion des infrastructures réseau, administration de systèmes et sécurité informatique.</p>
-                    <p>💻 Passionné par les nouvelles technologies, je m'intéresse particulièrement à la virtualisation, aux environnements Linux, et à la gestion de réseaux sécurisés.</p>
-                    <p>🎯 Mon objectif professionnel est de devenir expert en administration réseau et infrastructure, tout en approfondissant mes compétences en cybersécurité afin de relever les défis de l'informatique moderne.</p>
+                    <p>🏫 Étudiant en <strong>BTS SIO</strong> (Services Informatiques aux Organisations), spécialité <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux) au Lycée Édouard Gand à Amiens. Je me forme à l'administration des systèmes, la gestion des réseaux et la sécurité informatique.</p>
+                    <p>💻 Passionné par les nouvelles technologies, j’ai un fort intérêt pour la <strong>virtualisation</strong>, les environnements <strong>Linux</strong> et la <strong>cybersécurité</strong>.</p>
+                    <p>🎯 Mon objectif : devenir <strong>expert en administration réseau</strong> et approfondir mes compétences en cybersécurité pour relever les défis de l’informatique moderne.</p>
                 </div>
             </div>
         </div><br><br>
         <div class="container text-center">
             <div class="text-center">
-                <h2 class="orange-text-bar text-center">Mes qualités 🧰</h2></div><br>
+                <h2 class="orange-text-bar text-center">Mes qualités 🧰</h2></div><br><br>
             <div class="row">
                 <div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border">
@@ -101,7 +104,7 @@
                 <div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border">
                         <div class="card-body">
-                            <img src="assets/imgs/perseverant.png" class="card-img" alt="perseverant">
+                            <img src="assets/imgs/perseverance.png" class="card-img" alt="perseverant">
                             <h5 class="card-text">Pérséverant</h5>
                         </div>
                     </div>
@@ -166,8 +169,8 @@
                         </li>
                         <li class="parcours-text">
                             <h4><strong>Lycée Boucher De Perthes Abbeville</strong></h4>
-                            <i><strong>Bac Pro MCV avec mention</strong></i><br>
-                            <p>Formation en Bac Pro MCV, compétences en communication et gestion de la relation client.</p>
+                            <i><strong>Bac Pro MCV</strong></i><br>
+                            <p>Formation au métiers du Commerce et de la vente, avec des compétences en <strong>communication</strong> et <strong>gestion de la relation client</strong>, et obtention du <strong>diplôme national du brevet</strong> avec mention.</p>
                         </li>
                         <li class="parcours-text">
                             <h4><strong>Collège Ponthieu Abbeville</strong></h4>
@@ -175,7 +178,6 @@
                             <p>Obtention du diplôme de fin de collège avec mention.</p>
                         </li>
                     </ul> <!-- Fin de la liste -->
-                    <br><br><br>
                 </div>
             </div>
         </div>
@@ -253,124 +255,188 @@
     </section>
     <!-- End of Projet section -->
      <!-- certification Section -->
-      <section id="certification" class="section">
-        <div class="container text-center">
-            <div class="text-center">
-                <h2 class="orange-text-bar text-center">CERTIFICATION🎀</h2></div><br>
-            <iframe src="https://www.pearltrees.com/steevyparis/certification/id87282260?embed=2&d=202501091334" width="100%" height="700px" style="border:0px; background: transparent;"></iframe></section>
+     <section id="certification" class="section">
+        <div class="text-center">
+            <h2 class="orange-text-bar text-center">CERTIFICATION🎀</h2>
+        </div><br>
+        <div class="menu">
+            <button onclick="filterCards('TOUS')">TOUS</button>
+            <button onclick="filterCards('PIX')">PIX</button>
+            <button onclick="filterCards('SOLOLEARN')">SOLOLEARN</button>
+            <button onclick="filterCards('CNILL')">CNILL</button>
+            <button onclick="filterCards('CISCO')">CISCO</button>
+        </div>
+        <div class="container">
+            <div class="container_cert">
+                <!-- Carte PIX -->
+                <div class="cardcert show PIX">
+                    <div>
+                        <img src="assets/imgs/Pix_logo.png" alt="PIX">
+                    </div>
+                    <h3>PIX 2023</h3>
+                </div>
+                <div class="cardcert show PIX">
+                    <div>
+                        <img src="assets/imgs/Pix_logo.png" alt="PIX">
+                    </div>
+                    <h3>PIX 2025</h3>
+                </div>
+                <!-- Carte SOLOLEARN HTML -->
+                <div class="cardcert show SOLOLEARN">
+                    <div>
+                        <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                    </div>
+                    <h3>SOLOLEARN HTML</h3>
+                </div>
+                <!-- Carte SOLOLEARN CSS -->
+                <div class="cardcert show SOLOLEARN">
+                    <div>
+                        <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                    </div>
+                    <h3>SOLOLEARN CSS</h3>
+                </div>
+                <!-- Carte SOLOLEARN Technologies -->
+                <div class="cardcert show SOLOLEARN">
+                    <div>
+                        <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                    </div>
+                    <h3>SOLOLEARN Technologies pour tous</h3>
+                </div>
+                <!-- Carte CISCO -->
+                <div class="cardcert show CISCO">
+                    <div>
+                        <img src="assets/imgs/CISCO.jpg" alt="CISCO">
+                    </div>
+                    <h3>CISCO Les bases du matériel informatique</h3>
+                </div>
+                <!-- Carte CNILL MODULE 1 -->
+                <div class="cardcert show CNILL">
+                    <div>
+                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                    </div>
+                    <h3>CNILL MODULE 1</h3>
+                </div>
+                <!-- Carte CNILL MODULE 2 -->
+                <div class="cardcert show CNILL">
+                    <div>
+                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                    </div>
+                    <h3>CNILL MODULE 2</h3>
+                </div>
+                <!-- Carte CNILL MODULE 3 -->
+                <div class="cardcert show CNILL">
+                    <div>
+                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                    </div>
+                    <h3>CNILL MODULE 2</h3>
+                </div>
+                <!-- Carte CNILL MODULE 4 -->
+                <div class="cardcert show CNILL">
+                    <div>
+                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                    </div>
+                    <h3>CNILL MODULE 4</h3>
+                </div>
+                <!-- Carte CNILL MODULE 5 -->
+                <div class="cardcert show CNILL">
+                    <div>
+                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                    </div>
+                    <h3>CNILL MODULE 5</h3>
+                </div>
+            </div>
+        </div>
+    </section>
         <!-- End of Certification section -->     
 
     <!-- bts-sio Section -->
     <section id="bts-sio" class="section">
         <div class="container text-center">
             <div class="text-center">
-                <h2 class="orange-text-bar text-center">BTS-SIO ÉPREUVE</h2></div><br>
-            <p class="mb-5 pb-4">Les épreuves qui sont relatives au bts-sio.</p>
+                <h2 class="orange-text-bar text-center">BTS-SIO</h2>
+            </div><br>
+            <p class="mb-5 pb-4">Le brevet de technicien supérieur services informatiques aux organisations (BTS SIO) s’adresse à ceux qui souhaitent se former en deux ans aux métiers d’administrateur réseau ou de développeur pour intégrer directement le marché du travail ou continuer des études dans le domaine de l’informatique..</p>
             <div class="row text-left">
                 <div class="col-md-4">
                     <div class="card border mb-4">
-                        <img src="assets/imgs/vr-icon.jpg" class="card-img-top w-100" alt="icon représente la réalité virtuelle.">
+                        <img src="assets/imgs/Veille%20Technologique.png" class="card-img-top w-100" alt="icon représente la réalité virtuelle.">
                         <div class="card-body">
                             <h5 class="card-title">Veille technologique</h5>
                             <div class="post-details">
                                 Sujet « La réalité virtuelle ».
                             </div>
-                            <a href="javascript:void(0)">en voir plus..</a>
+                            <a>En voir plus..</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border mb-4">
-                        <img src="assets/imgs/blog-2.jpg" class="card-img-top w-100">
+                        <img src="assets/imgs/synthèse.png" class="card-img-top w-100">
                         <div class="card-body">
-                            <h5 class="card-title">Web Layouts</h5>
+                            <h5 class="card-title">Tableau de synthèse</h5>
                             <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                                Compétences acquises durant mes 2 années de BTS-SIO.
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
+                            <a>En voir plus..</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border mb-4">
-                        <img src="assets/imgs/blog-3.jpg" class="card-img-top w-100">
+                        <img src="assets/imgs/Attestation%20de%20stage.png" class="card-img-top w-100">
                         <div class="card-body">
-                            <h5 class="card-title">Bootstrap Framework</h5>
+                            <h5 class="card-title">Attestations de stage</h5>
                             <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                                Mais 2 attestations.
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
+                            <a>En voir plus..</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>      
-    <!-- Contact Section -->
-    <section id="contact" class="position-relative section">
-        <div class="container text-center">
-            <div class="text-center">
-                <h2 class="orange-text-bar text-center">CONTACT ✉️</h2></div><br>
-            <div class="contact_us_6">
-                <div class="responsive-container-block container">
-                    <form class="form-box" method="POST" action="mailto:steevy.paris@proton.me" enctype="text/plain">
-                        <div class="container-block form-wrapper">
-                            <div class="mob-text">
-                                <p class="text-blk contactus-head">Entrer en contact</p>
-                            </div>
-                            <div class="responsive-container-block" id="i2cbk">
-                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-3">
-                                    <p class="text-blk input-title">NOM*</p>
-                                    <input class="input" id="ijowk-3" name="Nom" placeholder="Entrez votre nom..." required>
-                                </div>
-                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ip1yp">
-                                    <p class="text-blk input-title">EMAIL*</p>
-                                    <input class="input" id="ipmgh-3" name="Email" type="email" placeholder="Entrez votre email..." required>
-                                </div>
-                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ih9wi">
-                                    <p class="text-blk input-title">NUMÉRO DE TÉLÉPHONE</p>
-                                    <input class="input" id="imgis-3" name="PhoneNumber" type="tel" placeholder="Entrez votre numéro de téléphone...">
-                                </div>
-                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-3">
-                                    <p class="text-blk input-title">VOTRE MESSAGE*</p>
-                                    <textarea class="textinput" id="i5vyy-3" name="Message" placeholder="Entrez votre message ici..." required></textarea>
-                                </div>
-                            </div>
-                            <button class="submit-btn" type="submit" id="w-c-s-bgc_p-1-dm-id-2">
-                            Envoyer
-                        </button>
-                    </div>
-                </form>
-                <div class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
-                    <div class="map-part">
-                        <p class="map-contactus-head">Localisation</p>
-                        <p>Abbeville 🗺️</p>
-                        <div class="social-media-links mob">
-                        </div>
-                        <div class="map-box container-block">
-                            <iframe
-                            width="100%" 
-                            height="500" 
-                            frameborder="0" 
-                            scrolling="no" 
-                            marginheight="0" 
-                            marginwidth="0" 
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=1.796%2C50.084%2C1.873%2C50.109&layer=mapnik">
-                        </iframe>
-                        </div>
+    </section>
+
+<!-- Start of Contact Section -->
+<section id="contact" class="section">    
+    <div class="container text-center">
+        <div class="text-center">
+            <h2 class="orange-text-bar text-center">CONTACT✉️</h2>
+        </div><br>
+        <div class="row input-container">
+            <form method="POST" action="mailto:steevy.paris@proton.me" enctype="text/plain">
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <input type="text" name="Nom" required />
+                        <label>Nom</label> 
                     </div>
                 </div>
-            </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="email" name="Mail" required />
+                        <label>Mail</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" name="Phone"/>
+                        <label>Numéro de téléphone</label> 
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <textarea name="Message" required></textarea>
+                        <label>Message</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <button type="submit" class="btn-lrg submit-btn">Envoyer</button>
+                </div>
+            </form>
         </div>
-    </div>           
-</section>
-    <!-- End of Contact Section -->
+    </div>
+</section>    
+<!-- End of Contact Section -->
 
     <!-- Page Footer -->
     <footer class="page-footer">
@@ -400,6 +466,9 @@
 
     <!-- steller js -->
     <script src="assets/js/steller.js"></script>
+
+    <!-- Paris Steevy js -->
+    <script src="assets/js/certification.js"></script>
 
 </body>
 </html>
