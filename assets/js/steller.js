@@ -1,34 +1,52 @@
-/*!
-=========================================================
-* Steller Landing page
-=========================================================
+document.addEventListener("DOMContentLoaded", function () {
+    let navLinks = document.querySelectorAll(".nav-link, .btn.btn-primary.rounded.ml-4");
+    let navbar = document.querySelector(".navbar");
 
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            let targetId = this.getAttribute("href");
 
-=========================================================
+            if (targetId.startsWith("#")) {
+                event.preventDefault();
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+                let targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    let headerHeight = navbar.offsetHeight;
+                    let targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
 
-// smooth scroll
-$(document).ready(function(){
-    $(".nav-link, .btn.btn-primary.rounded.ml-4").on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            
-            var hash = this.hash;
-            var headerHeight = $(".nav-link").outerHeight(); // Ajustez selon l'élément de votre en-tête
-            var targetPosition = $(hash).offset().top - headerHeight;
+                    // Animation smooth scroll avec requestAnimationFrame
+                    smoothScrollTo(targetPosition, 700);
 
-            // Animation du défilement
-            $('html, body').animate({
-                scrollTop: targetPosition
-            }, 700, function(){
-                // Modifier l'URL sans téléporter la page
-                window.history.pushState(null, null, hash);
-            });
-        } 
+                    // Modifier l'URL sans recharger la page
+                    history.pushState(null, null, targetId);
+
+                    // Mettre à jour le lien actif
+                    navLinks.forEach(nav => nav.classList.remove("active"));
+                    this.classList.add("active");
+                }
+            }
+        });
     });
+
+    function smoothScrollTo(to, duration) {
+        let start = window.scrollY;
+        let change = to - start;
+        let startTime = performance.now();
+
+        function animateScroll(currentTime) {
+            let timeElapsed = currentTime - startTime;
+            let progress = Math.min(timeElapsed / duration, 1);
+            let easeInOutQuad = progress < 0.5 
+                ? 2 * progress * progress 
+                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+            window.scrollTo(0, start + change * easeInOutQuad);
+
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animateScroll);
+            }
+        }
+
+        requestAnimationFrame(animateScroll);
+    }
 });

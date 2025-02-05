@@ -77,18 +77,16 @@ textarea {
     height: 50px;
     font-size: 20px;
     font-weight: 700;
-    color: white;
     border-radius: 0.25rem;
-    display: block;
-    margin: 20px auto 0;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: white;
 }
 
 .submit-btn:hover {
-    transform: translateY(1px);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
-              0 1px 1px 0 rgba(0,0,0,0.09);
+    color: #fff;
+    background-color: #ff5c31;
+    border-color: #ff5224;
 }
 
 @media (max-width: 768px) {
