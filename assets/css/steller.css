@@ -83,7 +83,7 @@ p {
 
 ul {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   list-style: none;
 }
 .btn-rounded{
@@ -402,166 +402,6 @@ h6 {
   border-color: white;
 }
 
-.nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
-}
-
-.nav-link:hover, .nav-link:focus {
-  text-decoration: none;
-}
-
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-.navbar > .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-
-.navbar-nav .nav-link {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.navbar .navbar-nav .nav-link.active {
-  color: var(--orange);
-}
-
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 0.5;
-  align-items: center;
-}
-
-.navbar-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-}
-
-.navbar-toggler {
-  position: fixed; /* Positionnement fixe */
-  top: 1rem; /* Espacement du bord supérieur */
-  left: 1rem; /* Espacement du bord gauche */
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  z-index: 1050; /* Pour s'assurer que le bouton soit au-dessus des autres éléments */
-}
-
-.navbar-toggler:hover, .navbar-toggler:focus {
-  text-decoration: none;
-}
-
-.navbar-toggler-icon {
-  display: inline-block;
-  width: 2.5em;
-  height: 2.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
-}
-
-/* Responsive: */
-@media (max-width: 991.98px) {
-  .navbar-expand-lg > .container {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .navbar-collapse {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-toggler {
-    display: contents;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .navbar-toggler-icon {
-    background-image: url("../../assets/imgs/list-icon.png");
-  }
-}
-
-/* For larger screens (992px and up) */
-@media (min-width: 992px) {
-  .navbar-expand-lg {
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-  }
-
-  .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-
-  .navbar-expand-lg .navbar-toggler {
-    display: none;
-  }
-}
-
-.navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.navbar-light .navbar-nav .nav-link {
-  color: white; /* La couleur initiale */
-}
-
-.navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.navbar-light .navbar-toggler-icon {
-  background-image: url("../../assets/imgs/list-icon.png");
-}
 
 
 .card {
@@ -680,11 +520,6 @@ h6 {
 .mb-4 {
   margin-bottom: 1.5rem !important;
 }
-
-.ml-4 {
-  margin-left: 1.5rem !important;
-}
-
 .mt-5 {
   margin-top: 3rem !important;
 }
@@ -756,6 +591,7 @@ h6 {
     min-width: 992px !important;
   }
   .navbar {
+    padding-top: 70px; /* Ajuste cette valeur selon la hauteur de ta navbar */
     display: none;
   }
 }
@@ -903,37 +739,6 @@ h2, h4, h5, h6 {
   background: var(--orange);
   color: #fff;
 }
-
-.navbar {
-  padding: 0;
-  min-height: 80px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background: #252533;
-}
-
-.navbar .navbar-nav {
-  height: auto;
-}
-
-.navbar .navbar-nav .nav-link {
-  font-size: 13px;
-  color: white;
-  font-weight: bold;
-  margin: 0 10px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.navbar .navbar-nav .btn {
-  min-width: 120px;
-}
-
-@media (max-width: 767.98px) {
-  .navbar {
-    padding: 0 20px;
-  }
-}
 .orange-text-bar {
   display: inline;  /* Reste un élément en ligne */
   border-bottom: 5px solid var(--orange);  /* Crée une barre orange en dessous du texte */
@@ -969,7 +774,7 @@ h2, h4, h5, h6 {
 }
 
 .header {
-  height: 94vh;
+  height: 87vh;
   min-height: 650px;
   border-bottom: 10px solid var(--orange);
 }
@@ -1063,4 +868,107 @@ h2, h4, h5, h6 {
 
 .section:nth-child(even) {
   background: #1E1E2C;
+}
+
+
+/* Réinitialisation des marges et paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body avec un padding-top pour ne pas cacher le contenu sous la navbar */
+body {
+  padding-top: 70px; /* Ajuste cette valeur selon la hauteur de ta navbar */
+  font-family: Arial, sans-serif; /* Choisir une police simple pour tout le site */
+}
+
+/* Style de la barre de navigation fixe */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--gray-dark);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar-toggler-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0;
+  background-image: url('../../assets/imgs/list-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: left; /* Aligner le contenu à gauche dans le parent */
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff6347; /* Couleur au survol */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-toggler {
+      display: block; /* Affiche le bouton hamburger sur petits écrans */
+  }
+
+  .navbar-collapse {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-nav {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-item {
+      margin: 10px 0;
+  }
+
+  .navbar-collapse.active {
+      display: flex;
+  }
 }
