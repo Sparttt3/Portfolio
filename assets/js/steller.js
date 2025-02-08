@@ -1,28 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let navLinks = document.querySelectorAll(".nav-link, .btn.btn-primary.rounded.ml-4");
+    let navLinks = document.querySelectorAll(".nav-link");
+    let sections = document.querySelectorAll("section"); // Sélectionne toutes les sections
     let navbar = document.querySelector(".navbar");
 
+    // Fonction pour gérer le changement de couleur des liens pendant le scroll
+    function updateActiveLink() {
+        let scrollPosition = window.scrollY + navbar.offsetHeight; // Prend en compte la hauteur de la barre de navigation
+        sections.forEach(section => {
+            let sectionTop = section.offsetTop;
+            let sectionHeight = section.offsetHeight;
+            let sectionBottom = sectionTop + sectionHeight;
+
+            // Vérifie si la section est dans la fenêtre de visualisation
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                let id = section.getAttribute("id");
+                let activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+
+                // Retirer la classe 'nav-link-active' de tous les liens
+                navLinks.forEach(nav => nav.classList.remove("nav-link-active"));
+
+                // Ajouter la classe 'nav-link-active' au lien correspondant à la section visible
+                if (activeLink) {
+                    activeLink.classList.add("nav-link-active");
+                }
+            }
+        });
+    }
+
+    // Exécuter la fonction au chargement de la page et à chaque scroll
+    updateActiveLink();
+    window.addEventListener("scroll", updateActiveLink);
+
+    // Ajouter les événements de clic pour le scroll doux et mettre à jour l'URL
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             let targetId = this.getAttribute("href");
-
             if (targetId.startsWith("#")) {
                 event.preventDefault();
-
                 let targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     let headerHeight = navbar.offsetHeight;
                     let targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
 
-                    // Animation smooth scroll avec requestAnimationFrame
                     smoothScrollTo(targetPosition, 700);
-
-                    // Modifier l'URL sans recharger la page
                     history.pushState(null, null, targetId);
-
-                    // Mettre à jour le lien actif
-                    navLinks.forEach(nav => nav.classList.remove("active"));
-                    this.classList.add("active");
                 }
             }
         });
