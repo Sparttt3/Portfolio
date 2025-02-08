@@ -9,12 +9,18 @@
 /* Style du conteneur des cartes */
 .container_cert {
     display: flex;
-    justify-content: flex-start; /* Aligne les éléments à gauche par défaut */
+    justify-content: center; /* Aligne les éléments à gauche par défaut */
     gap: 20px; /* Espace entre les cartes */
     padding: 20px;
     flex-wrap: wrap; /* Permet aux cartes de s'organiser en lignes si nécessaire */
     transition: justify-content 0.3s ease; /* Transition pour l'alignement */
 }
+@media (max-width: 989px) {
+    .container_cert {
+        gap: 5px; /* Espace entre les cartes */
+        padding: 0px;
+    }
+  }
 
 /* Classe qui centre les cartes lorsqu'elle est ajoutée */
 .container_cert.centered {
