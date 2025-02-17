@@ -138,11 +138,11 @@
     
         <div class="parcours-container">
             <!-- Expériences Professionnelles -->
-            <div>
+            <div class="parcours-block">
                 <div class="text-center">
                     <h2><u>Expériences Professionnelles</u></h2>
                 </div><br>
-                <ul>
+                <ul class="parcours-list">
                     <li class="parcours-text">
                         <h4><strong>Stage : Devisse Informatique</strong></h4>
                         <i><strong>11/11/2024 - 22/12/2024</strong></i><br>
@@ -162,14 +162,14 @@
             </div>
     
             <!-- Formations Professionnelles -->
-            <div>
+            <div class="parcours-block">
                 <div class="text-center">
                     <h2><u>Formations Professionnelles</u></h2>
                 </div><br>
-                <ul>
+                <ul class="parcours-list">
                     <li class="parcours-text">
                         <h4><strong>Lycée Édouard Gand Amiens</strong></h4>
-                        <i><strong>BTS SIO OPTION SISR (en-cours)</strong></i><br>
+                        <i><strong>BTS SIO OPTION SISR (en cours)</strong></i><br>
                         <p>J'ai poursuivi mes études au Lycée Édouard Gand à Amiens en BTS SIO, option SISR.</p>
                     </li>
                     <li class="parcours-text">
@@ -185,77 +185,77 @@
                 </ul>
             </div>
         </div>
-    </section>    
+    </section>   
     <!-- End of Skills sections -->
 
     <!-- Projet section -->
     <section id="projet" class="section">
         <div class="container text-center">
             <div class="text-center">
-                <h2 class="orange-text-bar text-center">PROJET🗃️</h2></div><br>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/Proxmox.png" alt="Proxmox Stage">
+                <h2 class="orange-text-bar text-center">PROJET🗃️</h2>
+            </div><br>
+            <div class="container">
+                <div class="grid" id="projectGrid">
+                    <div class="project">
+                        <img src="assets/imgs/Proxmox.png" alt="Proxmox" class="img-project">
                         <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>En savoir voir plus...</h5>
-                                <a href="lien a entrer"><img src="assets/imgs/play-button.png" class="ti-zoom-in" alt="en voir plus"></a>
-                            </div>  
+                            <button class="btn-doc">Voir la documentation</button>
                         </div>
                     </div>
-                    <div class="img-wrapper">
-                        <img src="nothing">
+                    <div class="project">
+                        <img src="assets/imgs/haproxy-keepalive.png" alt="HAProxy" class="img-project">
                         <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>En savoir voir plus...</h5>
-                                <a href="lien a entrer"><img src="assets/imgs/play-button.png" class="ti-zoom-in" alt="en voir plus"></a>
-                            </div>                              
-                        </div>
-                    </div>                  
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/haproxy-keepalive.png" alt="haproxy-keepalive Stage">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>En savoir voir plus...</h5>
-                                <a href="lien a entrer"><img src="assets/imgs/play-button.png" class="ti-zoom-in" alt="en voir plus"></a>
-                            </div>  
+                            <button class="btn-doc">Voir la documentation</button>
                         </div>
                     </div>
-                    <div class="img-wrapper">
-                        <img src="nothing">
+                    <div class="project">
+                        <img src="assets/imgs/candygame.png" alt="Candy Game" class="img-project">
                         <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>En savoir voir plus...</h5>
-                                <a href="lien a entrer"><img src="assets/imgs/play-button.png" class="ti-zoom-in" alt="en voir plus"></a>
-                            </div>                              
-                        </div>
-                    </div>                  
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/déckédex.png" alt="projet déckédex">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>En savoir voir plus...</h5>
-                                <a href="lien a entrer"><img src="assets/imgs/play-button.png" class="ti-zoom-in" alt="en voir plus"></a>
-                            </div>  
+                            <button class="btn-doc">Voir la documentation</button>
                         </div>
                     </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/candygame.png" alt="projet candygame">
+                    <div class="project">
+                        <img src="assets/imgs/déckédex.png" alt="Deckédex" class="img-project">
                         <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>En savoir voir plus...</h5>
-                                <a href="lien a entrer"><img src="assets/imgs/play-button.png" class="ti-zoom-in" alt="en voir plus"></a>
-                            </div>                              
+                            <button class="btn-doc">Voir la documentation</button>
                         </div>
-                    </div>                  
+                    </div>
                 </div>
-            </div>
+            </div><br>
+            <div class="arrow arrow-left" onclick="prevGrid()">&#x2B05;</div>
+            <div class="arrow arrow-right" onclick="nextGrid()">&#x27A1;</div>
+        </div><br><br><br><br><br>
         </div>
+        <div class="text-center">
+            <h3><u>Mes outils / logiciel ⚙️</u></h3>
+        <div id="jeff" class="container">
+            <div class="row">
+              <div class="stack">
+                <img src="assets/imgs/icon/c-sharp.png" class="carousel-img">
+                <img src="assets/imgs/icon/Git.png" class="carousel-img">
+                <img src="assets/imgs/icon/Github.png" class="carousel-img">
+                <img src="assets/imgs/icon/Notion.png" class="carousel-img">
+                <img src="assets/imgs/icon/proxmox.png" class="carousel-img">
+                <img src="assets/imgs/icon/unity.png" class="carousel-img">
+                <img src="assets/imgs/icon/virtualbox.png" class="carousel-img">
+                <img src="assets/imgs/icon/vscode.png" class="carousel-img">
+                <img src="assets/imgs/icon/wireguard.png" class="carousel-img">
+                <img src="assets/imgs/icon/wireshark.png" class="carousel-img">
+                <img src="assets/imgs/icon/xampp.png" class="carousel-img">
+                <!-- Clonage des images pour éviter la coupure -->
+                <img src="assets/imgs/icon/c-sharp.png" class="carousel-img">
+                <img src="assets/imgs/icon/Git.png" class="carousel-img">
+                <img src="assets/imgs/icon/Github.png" class="carousel-img">
+                <img src="assets/imgs/icon/Notion.png" class="carousel-img">
+                <img src="assets/imgs/icon/proxmox.png" class="carousel-img">
+                <img src="assets/imgs/icon/unity.png" class="carousel-img">
+                <img src="assets/imgs/icon/virtualbox.png" class="carousel-img">
+                <img src="assets/imgs/icon/vscode.png" class="carousel-img">
+                <img src="assets/imgs/icon/wireguard.png" class="carousel-img">
+                <img src="assets/imgs/icon/wireshark.png" class="carousel-img">
+                <img src="assets/imgs/icon/xampp.png" class="carousel-img">
+            </div>
+        </div>        
     </section>
     <!-- End of Projet section -->
      <!-- certification Section -->
@@ -275,84 +275,105 @@
                 <!-- Carte PIX -->
                 <div class="cardcert show PIX">
                     <div>
-                        <img src="assets/imgs/Pix_logo.png" alt="PIX">
+                        <a href="certification/PIX/PIX2023.pdf" target="_blank">
+                            <img src="assets/imgs/Pix_logo.png" alt="PIX">
+                        </a>                        
                     </div>
                     <h3>PIX 2023</h3>
                 </div>
                 <div class="cardcert show PIX">
                     <div>
-                        <img src="assets/imgs/Pix_logo.png" alt="PIX">
+                        <a href="certification/PIX/PIX2023.pdf" target="_blank">
+                            <img src="assets/imgs/Pix_logo.png" alt="PIX">
+                        </a>
                     </div>
                     <h3>PIX 2025</h3>
                 </div>
                 <!-- Carte SOLOLEARN HTML -->
                 <div class="cardcert show SOLOLEARN">
                     <div>
-                        <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                        <a href="certification/SOLOLEARN/html.pdf" target="_blank">
+                            <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                        </a>  
                     </div>
                     <h3>SOLOLEARN HTML</h3>
                 </div>
                 <!-- Carte SOLOLEARN CSS -->
                 <div class="cardcert show SOLOLEARN">
                     <div>
-                        <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                        <a href="certification/SOLOLEARN/css.pdf" target="_blank">
+                            <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                        </a>
                     </div>
                     <h3>SOLOLEARN CSS</h3>
                 </div>
                 <!-- Carte SOLOLEARN Technologies -->
                 <div class="cardcert show SOLOLEARN">
                     <div>
-                        <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                        <a href="certification/SOLOLEARN/technologie.pdf" target="_blank">
+                            <img src="assets/imgs/sololearn.png" alt="SOLOLEARN">
+                        </a>
                     </div>
                     <h3>SOLOLEARN Technologies pour tous</h3>
                 </div>
                 <!-- Carte CISCO -->
                 <div class="cardcert show CISCO">
                     <div>
-                        <img src="assets/imgs/CISCO.jpg" alt="CISCO">
+                        <a href="certification/CISCO/Les bases du matériel informatique.pdf" target="_blank">
+                            <img src="assets/imgs/CISCO.jpg" alt="CISCO">
+                        </a>
                     </div>
                     <h3>CISCO Les bases du matériel informatique</h3>
                 </div>
                 <!-- Carte CNILL MODULE 1 -->
                 <div class="cardcert show CNILL">
                     <div>
-                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        <a href="certification/CNILL/module_1.pdf" target="_blank">
+                            <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        </a>
                     </div>
                     <h3>CNILL MODULE 1</h3>
                 </div>
                 <!-- Carte CNILL MODULE 2 -->
                 <div class="cardcert show CNILL">
                     <div>
-                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        <a href="certification/CNILL/module_2.pdf" target="_blank">
+                            <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        </a>
                     </div>
                     <h3>CNILL MODULE 2</h3>
                 </div>
                 <!-- Carte CNILL MODULE 3 -->
                 <div class="cardcert show CNILL">
                     <div>
-                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        <a href="certification/CNILL/module_3.pdf" target="_blank">
+                            <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        </a>
                     </div>
-                    <h3>CNILL MODULE 2</h3>
+                    <h3>CNILL MODULE 3</h3>
                 </div>
                 <!-- Carte CNILL MODULE 4 -->
                 <div class="cardcert show CNILL">
                     <div>
-                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        <a href="certification/CNILL/module_4.pdf" target="_blank">
+                            <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        </a>
                     </div>
                     <h3>CNILL MODULE 4</h3>
                 </div>
                 <!-- Carte CNILL MODULE 5 -->
                 <div class="cardcert show CNILL">
                     <div>
-                        <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        <a href="certification/CNILL/module_5.pdf" target="_blank">
+                            <img src="assets/imgs/CNILL.png" alt="CNILL">
+                        </a>
                     </div>
                     <h3>CNILL MODULE 5</h3>
                 </div>
             </div>
         </div>
     </section>
-        <!-- End of Certification section -->     
-
+    <!-- End of Certification section -->     
     <!-- bts-sio Section -->
     <section id="bts-sio" class="section">
         <div class="container text-center">
@@ -457,12 +478,10 @@
     <!-- bootstrap 3 affix -->
 	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
-    <!-- steller js -->
-    <script src="assets/js/steller.js"></script>
-
     <!-- Paris Steevy js -->
     <script src="assets/js/certification.js"></script>
     <script src="assets/js/toggler.js"></script>
-
+    <script src="assets/js/steller.js"></script>
+    <script src="assets/js/projet.js"></script>
 </body>
 </html>

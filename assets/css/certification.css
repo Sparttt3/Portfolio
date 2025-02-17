@@ -35,7 +35,7 @@
 .cardcert {
     background: #252533;
     padding: 15px;
-    width: 150px; /* Largeur fixe pour chaque carte */
+    width: 30%; /* Largeur fixe pour chaque carte */
     height: auto; /* Hauteur auto pour ajuster la taille selon le contenu */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);

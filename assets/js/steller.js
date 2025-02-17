@@ -54,8 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.preventDefault();
                 let targetElement = document.querySelector(targetId);
                 if (targetElement) {
+                    // Réduire la hauteur de la barre de navigation de moitié
                     let headerHeight = navbar.offsetHeight;
-                    let targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+                    let targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - (headerHeight / 2);
                     
                     smoothScrollTo(targetPosition);
 

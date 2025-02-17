@@ -41,7 +41,7 @@
 
 input,
 textarea {
-    padding: 15px 30px; /* Ajuster le padding pour plus de confort */
+    padding: 30px 30px; /* Ajuster le padding pour plus de confort */
     border: 0;
     width: 100%;
     max-width: 100%;
@@ -126,4 +126,9 @@ input[type=checkbox] + label {
 input[type=checkbox]:checked + label {
     color: #f00;
     font-style: normal;
+}
+.img-project {
+    width: 100%; /* Remplit le conteneur */
+    height: 200px; /* Hauteur fixe */
+    object-fit: cover; /* Coupe l'image pour qu'elle remplisse le cadre */
 }
