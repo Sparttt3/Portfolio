@@ -69,6 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function smoothScrollTo(to) {
-        window.scrollTo({ top: to, behavior: "smooth" });
+        $('html, body').animate({ scrollTop: to }, 500); // 500ms pour un défilement fluide
     }
 });
