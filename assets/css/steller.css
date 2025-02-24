@@ -114,7 +114,6 @@ a {
 img {
   vertical-align: middle;
   border-style: none;
-  padding: 5px;
 }
 
 button {
@@ -278,6 +277,12 @@ h6 {
   padding-right: 15px;
   padding-left: 15px;
 }
+.quality-img{
+  position: relative;
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 /* Responsive Grid System */
 @media (min-width: 476px) {
   .col-sm-4 {
@@ -294,7 +299,7 @@ h6 {
 }
 
 @media (min-width: 770px) {
-  .col-md-3 {
+  .col-md-3, .quality-img {
     flex: 0 0 25%;
     max-width: 25%;
   }
@@ -880,11 +885,12 @@ body {
 @media (max-width: 923px) {
   .navbar {
     justify-content: flex-start;
+    padding-bottom: 50px;
   }
 }
 
 .navbar-toggler {
-  position: relative; 
+  position: absolute; 
   background: none;
   border: none;
   color: white;
@@ -903,6 +909,7 @@ body {
   background-repeat: no-repeat;
   text-align: left; /* Aligner le contenu à gauche dans le parent */
   float: left; /* Aligner à gauche */
+  margin-top: 40px;
 }
 
 .navbar-collapse {
@@ -1023,6 +1030,7 @@ body {
   position: relative; /* Nécessaire pour positionner l'overlay */
   overflow: hidden; /* Cache l'overlay si non visible */
   transition: transform 0.3s;
+  padding: 5px;
 }
 
 /* Agrandissement au survol */

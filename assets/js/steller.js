@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     smoothScrollTo(targetPosition);
 
                     if (targetId && document.querySelector(targetId)) {
-                        history.pushState(null, null, targetId);
+                        history.replaceState(null, null, " ");
                     }
                 }
             }
