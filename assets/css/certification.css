@@ -66,19 +66,53 @@
 }
 
 /* Style des boutons du menu */
+.menu {
+    display: flex;
+    justify-content: center; /* Centre les boutons */
+    align-items: center;
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    width: 100%;
+}
+
 .menu button {
     background: #252533;
     border: none;
-    padding: 0.65rem 0.9rem;
+    padding: 0.65rem 1rem;
     color: white;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     border-radius: 0.25rem;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+    
+    /* Empêcher le débordement */
+    max-width: 90%; /* Empêche d'être trop large */
+    min-width: 120px; /* Garde une taille minimale */
+    width: auto; /* S'adapte au texte */
+    text-align: center;
+    white-space: nowrap; /* Évite le retour à la ligne */
+    overflow: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-/* Effet au survol des boutons */
+/* Effet au survol */
 .menu button:hover {
-    background: var(--orange);
+    background: #ff5c31;
+    transform: scale(1.05);
 }
+
+/* 🔥 Responsive : Empêcher tout débordement sur mobile */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column; /* Place les boutons en colonne */
+    }
+
+    .menu button {
+        font-size: 14px;
+        padding: 0.5rem 0.8rem;
+        width: 90%; /* Utilise au maximum 90% de l'écran */
+        max-width: 250px; /* Empêche un bouton trop large */
+    }
+}
+
