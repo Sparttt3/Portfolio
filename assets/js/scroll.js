@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
             let sectionHeight = section.offsetHeight;
             let sectionBottom = sectionTop + sectionHeight;
 
-            console.log(`Détection active : ${section.id}, scrollPosition: ${scrollPosition}, sectionTop: ${sectionTop}`);
-
             if (scrollPosition >= sectionTop - 10 && scrollPosition < sectionBottom - 10) {
                 let id = section.getAttribute("id");
                 let activeLink = document.querySelector(`.nav-link[href="#${id}"], .btn[href="#${id}"]`);

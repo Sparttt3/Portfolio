@@ -1,35 +1,39 @@
 let currentIndex = 0;
 const projects = [
     [
-        "assets/imgs/Proxmox.png",
-        "assets/imgs/haproxy-keepalive.png",
-        "assets/imgs/candygame.png",
-        "assets/imgs/déckédex.png"
+        "assets/imgs/Proxmox.jpg",
+        "assets/imgs/haproxy-keepalived.jpg",
+        "assets/imgs/candygame.jpg",
+        "assets/imgs/déckédex.jpg"
     ],
     [
-        "assets/imgs/projet5.png",
-        "assets/imgs/projet6.png",
-        "assets/imgs/projet7.png",
-        "assets/imgs/projet8.png"
+        "assets/imgs/projet5.jpg",
+        "assets/imgs/projet6.jpg",
+        "assets/imgs/projet7.jpg",
+        "assets/imgs/projet8.jpg"
     ],
     [
-        "assets/imgs/projet9.png",
-        "assets/imgs/projet10.png",
-        "assets/imgs/projet11.png",
-        "assets/imgs/projet12.png"
+        "assets/imgs/projet9.jpg",
+        "assets/imgs/projet10.jpg",
+        "assets/imgs/projet11.jpg",
+        "assets/imgs/projet12.jpg"
     ]
 ];
 
 function updateGrid() {
     const grid = document.getElementById("projectGrid");
-    grid.innerHTML = projects[currentIndex].map(imgSrc => 
-        `<div class="project">
-            <img src="${imgSrc}" class="img-project">
-            <div class="overlay">
-                <button class="btn-doc">Voir la documentation</button>
+    grid.innerHTML = projects[currentIndex].map(imgSrc => {
+        // Extraire le nom du fichier pour le mettre en alt
+        const altText = imgSrc.split('/').pop().split('.')[0].replace(/-/g, ' ');
+        return `
+            <div class="project">
+                <img src="${imgSrc}" alt="${altText}" class="img-project">
+                <div class="overlay">
+                    <button class="btn-doc">Voir la documentation</button>
+                </div>
             </div>
-        </div>`
-    ).join('');
+        `;
+    }).join('');
 }
 
 function nextGrid() {

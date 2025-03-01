@@ -218,7 +218,6 @@ h6 {
 
 .img-thumbnail {
   border-radius: 8px;
-  padding: 0.15rem;
   background-color: var(--gray-dark);
   max-width: 100%;
   height: auto;
@@ -288,6 +287,7 @@ h6 {
   width: 50%;
   padding-right: 15px;
   padding-left: 15px;
+  margin-bottom: 15px;
 }
 /* Responsive Grid System */
 @media (min-width: 476px) {
@@ -910,7 +910,7 @@ body {
   height: 50px;
   display: block;
   margin: 0;
-  background-image: url('../../assets/imgs/list-icon.png');
+  background-image: url('../../assets/imgs/icon/icon-list.webp');
   background-size: contain;
   background-repeat: no-repeat;
   text-align: left; /* Aligner le contenu à gauche dans le parent */
@@ -983,10 +983,15 @@ body {
 }
 /* Projet carousel */
 #jeff {
-  width: 57%;
+  width: 45%;
   height: 30%;
   overflow: hidden;
   position: relative;
+}
+@media (max-width: 770px){
+  #jeff {
+    width: 75%;
+    }
 }
 
 .stack {
@@ -1001,7 +1006,13 @@ body {
   height: auto;
   margin: 10px;
 }
-
+@media (max-width: 770px){
+  .carousel-img {
+    width: 70px;  /* Ajuste la largeur des images */
+    height: auto;
+    margin: 10px;
+    }
+}
 /* Animation du défilement fluide */
 @keyframes toTheLeft {
   0% {
@@ -1025,6 +1036,11 @@ body {
   border: 1px solid #555;
   border-radius: 8px;
 }
+@media (max-width: 770px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 colonnes égales */
+    grid-template-rows: repeat(1, 1fr); /* 2 lignes égales */
+    }}
 
 /* Style des projets */
 .project {
