@@ -11,7 +11,6 @@
     display: flex;
     justify-content: center; /* Aligne les éléments à gauche par défaut */
     gap: 20px; /* Espace entre les cartes */
-    padding: 20px;
     flex-wrap: wrap; /* Permet aux cartes de s'organiser en lignes si nécessaire */
     transition: justify-content 0.3s ease; /* Transition pour l'alignement */
 }
@@ -35,7 +34,7 @@
 .cardcert {
     background: #252533;
     padding: 15px;
-    width: 30%; /* Largeur fixe pour chaque carte */
+    width: 25%; /* Largeur fixe pour chaque carte */
     height: auto; /* Hauteur auto pour ajuster la taille selon le contenu */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -51,18 +50,21 @@
 
 /* Style des images des cartes */
 .cardcert img {
-    width: 80px; /* Taille de l'image */
-    height: 80px; /* Taille de l'image */
-    object-fit: cover; /* L'image remplira le carré sans déformer */
-    border-radius: 10px; /* Coins arrondis pour l'image elle-même (si désiré) */
+    width: 100%; /* L'image s'adapte à son conteneur */
+    max-width: 80px; /* Limite la taille sur les grands écrans */
+    height: auto; /* Maintient les proportions */
+    aspect-ratio: 1 / 1; /* Assure un format carré */
+    object-fit: cover; /* Évite la déformation */
+    border-radius: 10px; /* Coins arrondis */
 }
 
 /* Style des titres des cartes */
 .cardcert h3 {
     color: white;
-    font-size: 16px;
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: clamp(14px, 2vw, 18px); /* Ajuste la taille entre 14px et 18px */
+    margin: 0; /* Supprime les marges par défaut */
+    text-align: center; /* Centre le texte (optionnel) */
+    word-wrap: break-word; /* Évite le débordement sur petits écrans */
 }
 
 /* Style des boutons du menu */
@@ -92,17 +94,18 @@
     text-align: center;
     white-space: nowrap; /* Évite le retour à la ligne */
     overflow: hidden;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 5px;
 }
 
 /* Effet au survol */
 .menu button:hover {
-    background: #ff5c31;
+    background: #E03000;
     transform: scale(1.05);
 }
 
-/* 🔥 Responsive : Empêcher tout débordement sur mobile */
+/*  Responsive : Empêcher tout débordement sur mobile */
 @media (max-width: 600px) {
     .menu {
         flex-direction: column; /* Place les boutons en colonne */

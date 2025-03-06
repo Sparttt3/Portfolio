@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let navLinks = document.querySelectorAll(".nav-link, .btn");
+    let navLinks = document.querySelectorAll(".nav-link, .btn-primary");
     let sections = document.querySelectorAll("section");
     let navbar = document.querySelector(".navbar");
 
@@ -52,21 +52,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.preventDefault();
                 let targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Réduire la hauteur de la barre de navigation de moitié
+                    // Ajuster le défilement pour ne pas cacher la section sous la navbar
                     let headerHeight = navbar.offsetHeight;
                     let targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - (headerHeight / 2);
                     
+                    // Appel à la fonction de défilement fluide
                     smoothScrollTo(targetPosition);
-
-                    if (targetId && document.querySelector(targetId)) {
-                        history.replaceState(null, null, " ");
-                    }
                 }
             }
         });
     });
 
+    // Fonction de défilement fluide
     function smoothScrollTo(to) {
-        $('html, body').animate({ scrollTop: to }, 500); // 500ms pour un défilement fluide
+        const startPosition = window.scrollY;
+        const distance = to - startPosition;
+        const duration = 500; // Durée du défilement en ms
+        const startTime = performance.now();
+
+        function scroll() {
+            const elapsedTime = performance.now() - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const easeInOut = progress < 0.5
+                ? 4 * progress * progress * progress
+                : (progress - 1) * (2 * progress - 2) * (2 * progress - 2) + 1;
+
+            window.scrollTo(0, startPosition + distance * easeInOut);
+
+            if (elapsedTime < duration) {
+                requestAnimationFrame(scroll);
+            }
+        }
+
+        requestAnimationFrame(scroll);
     }
 });

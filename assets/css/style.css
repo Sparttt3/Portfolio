@@ -17,14 +17,14 @@
   --purple: #A16AE8;
   --pink: #FC8BC0;
   --red: #F85C70;
-  --orange: #ff7a57;
+  --orange: #E03000;
   --yellow: #FAD02C;
   --green: #A3C14A;
   --teal: #20c997;
   --cyan: #47D8E0;
   --white: #fff;
-  --gray: #D1D1D1;
-  --gray-dark: #252533;
+  --gray: #252533;
+  --gray-dark: #1E1E2C;;
   --primary: #ff7a57;
   --secondary: #6c757d;
   --success: #A3C14A;
@@ -66,9 +66,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--gray);
+  color: var(--white);
   text-align: left;
-  background-color: #1E1E2C;
+  background-color: var(--gray-dark);
 }
 
 h2, h4, h5, h6 {
@@ -218,7 +218,7 @@ h6 {
 
 .img-thumbnail {
   border-radius: 8px;
-  background-color: var(--gray-dark);
+  background-color: var(--gray);
   max-width: 100%;
   height: auto;
   border: 1px solid #555;
@@ -271,6 +271,7 @@ h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -378,11 +379,14 @@ h6 {
   background-color: var(--orange);
   color: white;
 }
-
 .btn-primary:hover {
-  color: #fff;
-  background-color: #ff5c31;
-  border-color: #ff5224;
+  color: var(--white);
+  border-color: var(--white);
+}
+.btn-primary-active {
+  color: var(--white);
+  border-color: var(--white);
+  z-index: 99;
 }
 
 .btn-primary:focus {
@@ -397,16 +401,16 @@ h6 {
 
 .btn-dark {
   color: #fff;
+  border: 1px solid transparent;
   background-color: var(--orange);
   padding: 10px 20px;
-  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-dark:hover {
-  color: #fff;
-  background-color: #ff5c31;
+  color: var(--white);
+  border-color: var(--white);
   transform: scale(1.1);
 }
 
@@ -448,7 +452,7 @@ h6 {
   height: auto;
 }
 .card-text{
- color: var(--gray);
+ color: var(--white);
 }
 
 .card-body {
@@ -679,8 +683,8 @@ h2, h4, h5, h6 {
   border: 1px solid #555;
   padding: 15px;
   border-radius: 8px;
-  background-color: var(--gray-dark);
-  color: var(--gray);
+  background-color: var(--gray);
+  color: var(--white);
   width: 100%; /* Assurer que toutes les cartes ont la même largeur */
   margin: 10px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -711,7 +715,7 @@ h2, h4, h5, h6 {
   margin-bottom: 15px;
 }
 .custom-card {
-  border-radius: 0.25rem;
+  border-radius: 8px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -857,7 +861,7 @@ h2, h4, h5, h6 {
 
 
 .section:nth-child(even) {
-  background: #1E1E2C;
+  background: var(--gray-dark);
 }
 
 
@@ -947,7 +951,7 @@ body {
   }}
 
 .nav-link:hover {
-  color: var(--gray); /* Couleur au survol */
+  color: var(--orange); /* Couleur au survol */
 }
 .nav-link-active {
   color: var(--orange); /* Change la couleur de l'élément actif */
@@ -983,45 +987,59 @@ body {
 }
 /* Projet carousel */
 #jeff {
-  width: 45%;
-  height: 30%;
-  overflow: hidden;
+  width: 100%;
+  height: 120px; /* Ajuste la hauteur */
   position: relative;
+  border: 1px solid #555;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
 }
-@media (max-width: 770px){
+
+@media (max-width: 770px) {
   #jeff {
-    width: 75%;
-    }
+      width: 75%;
+  }
 }
 
 .stack {
   display: flex;
-  animation: toTheLeft 30s infinite linear;
-  border : 1px solid #555;
-  box-shadow : 0 4px 8px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* On double les images pour créer un effet de boucle fluide */
+.carousel-track {
+  display: flex;
+  align-items: center;
+  animation: scroll 15s linear infinite;
+  width: max-content; /* Permet un défilement fluide */
 }
 
 .carousel-img {
-  width: 100px;  /* Ajuste la largeur des images */
-  height: auto;
+  width: 100px;  
+  height: 100px;
+  object-fit: cover;
   margin: 10px;
 }
-@media (max-width: 770px){
+
+@media (max-width: 770px) {
   .carousel-img {
-    width: 70px;  /* Ajuste la largeur des images */
-    height: auto;
-    margin: 10px;
-    }
-}
-/* Animation du défilement fluide */
-@keyframes toTheLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
+      width: 70px;
+      height: 70px;
   }
 }
+
+/* Animation en boucle parfaite */
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%); /* Défilement jusqu'à la moitié */
+  }
+}
+
 /* PROJET SECTION */
 
 /* Grille des projets */
@@ -1117,7 +1135,14 @@ body {
   border-radius: 50%;
   cursor: pointer;
   font-size: 20px;
+  border: 1px solid transparent;
 }
+.arrow:hover {
+  color: var(--white);
+  border-color: var(--white);
+  transform: scale(1.1);
+}
+
 .arrow-right {
   padding: 10px;
   margin: 5%;

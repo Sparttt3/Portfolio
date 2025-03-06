@@ -23,7 +23,7 @@
         <div class="navbar-collapse" id="navbar-collapse">
             <ul class="navbar-nav align-items-center">
                 <li class="nav-item">
-                    <a class="btn btn-primary nav-link" href="#accueil">ACCUEIL</a>
+                    <a class="btn btn-primary" href="#accueil">ACCUEIL</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">À PROPOS DE MOI</a>
@@ -52,26 +52,28 @@
     <header class="header">
         <div class="container">
             <div class="infos">
-                <h6 class="subtitle">Bienvenue sur mon portfolio</h6>
-                <h6 class="title">Paris Steevy</h6>
-                <h6 class="subtitle">Étudiant en BTS SIO - Option SISR</h6>
+                <p class="subtitle">Bienvenue sur mon portfolio</p>
+                <h1 class="title">Steevy Paris</h1>
+                <h2 class="subtitle">Étudiant en BTS SIO - Option SISR</h2>
                 <div class="buttons pt-3">
-                    <button class="btn btn-dark rounded">TÉLÉCHARGER MON CV</button>
+                    <a href="certification/CV/SteevyCV.pdf" target="_blank" download="Mon_CV.pdf">
+                        <button class="btn btn-dark rounded">TÉLÉCHARGER MON CV</button>
+                    </a>
                 </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/steevy-paris/" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/imgs/icon/icon-linkedin.webp" alt="LinkedIn" class="btn-rounded">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/steevy-paris/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn">
+                        <img src="assets/imgs/icon/icon-linkedin.webp" alt="Icône LinkedIn" class="btn-rounded">
                     </a>
-                    <a href="https://github.com/Sparttt3" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/imgs/icon/icon-github.webp" alt="GitHub" class="btn-rounded">
+                    <a href="https://github.com/Sparttt3" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub">
+                        <img src="assets/imgs/icon/icon-github.webp" alt="Icône GitHub" class="btn-rounded">
                     </a>
-                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=steevy.paris@proton.me" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/imgs/icon/gmail.webp" alt="Gmail" class="btn-rounded">
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=steevy.paris@proton.me" target="_blank" rel="noopener noreferrer" aria-label="Envoyer un email">
+                        <img src="assets/imgs/icon/gmail.webp" alt="Icône Gmail" class="btn-rounded">
                     </a>
                 </div>
             </div>              
             <div class="img-holder">
-                <img src="assets/imgs/avatar.webp" alt="Avatar de Steevy Paris">
+                <img src="assets/imgs/avatar.webp" alt="Photo de profil de Steevy Paris">
             </div>      
         </div>  
     </header>
@@ -201,7 +203,7 @@
             <div class="container">
                 <div class="grid" id="projectGrid">
                     <div class="project">
-                        <img src="assets/imgs/Proxmox.png" alt="Proxmox" class="img-project">
+                        <img src="assets/imgs/Proxmox.jpg" alt="Proxmox" class="img-project">
                         <div class="overlay">
                             <button class="btn-doc">Voir la documentation</button>
                         </div>
@@ -213,7 +215,7 @@
                         </div>
                     </div>
                     <div class="project">
-                        <img src="assets/imgs/candygame.jpg" alt="Projet Candy Game" class="img-project">
+                        <img src="assets/imgs/déckédex.jpg" alt="Projet Deckédex" class="img-project">
                         <div class="overlay">
                             <button class="btn-doc">Voir la documentation</button>
                         </div>
@@ -230,36 +232,41 @@
             <div class="arrow arrow-right" onclick="nextGrid()">&#x27A1;</div>
         </div><br>
         <div class="text-center">
-            <h3><u>Mes outils / logiciel ⚙️</u></h3></div>
-        <div id="jeff" class="container">
+            <h3><u>Mes outils / logiciels ⚙️</u></h3>
             <div class="row">
-              <div class="stack">
-                <img src="assets/imgs/logiciel/c-sharp.webp" class="carousel-img" alt="c-sharp">
-                <img src="assets/imgs/logiciel/Git.webp" class="carousel-img" alt="git">
-                <img src="assets/imgs/logiciel/Github.webp" class="carousel-img" alt="github">
-                <img src="assets/imgs/logiciel/Notion.webp" class="carousel-img" alt="notion">
-                <img src="assets/imgs/logiciel/proxmox.webp" class="carousel-img" alt="proxmox">
-                <img src="assets/imgs/logiciel/unity.webp" class="carousel-img" alt="unity">
-                <img src="assets/imgs/logiciel/virtualbox.webp" class="carousel-img" alt="virtualbox">
-                <img src="assets/imgs/logiciel/vscode.webp" class="carousel-img" alt="vscode">
-                <img src="assets/imgs/logiciel/wireguard.webp" class="carousel-img" alt="wireguard">
-                <img src="assets/imgs/logiciel/wireshark.webp" class="carousel-img" alt="wireshark">
-                <img src="assets/imgs/logiciel/xampp.webp" class="carousel-img" alt="xampp">
-                <!-- Clonage des images pour éviter la coupure -->
-                <img src="assets/imgs/logiciel/c-sharp.webp" class="carousel-img" alt="c-sharp">
-                <img src="assets/imgs/logiciel/Git.webp" class="carousel-img" alt="git">
-                <img src="assets/imgs/logiciel/Github.webp" class="carousel-img" alt="github">
-                <img src="assets/imgs/logiciel/Notion.webp" class="carousel-img" alt="notion">
-                <img src="assets/imgs/logiciel/proxmox.webp" class="carousel-img" alt="proxmox">
-                <img src="assets/imgs/logiciel/unity.webp" class="carousel-img" alt="unity">
-                <img src="assets/imgs/logiciel/virtualbox.webp" class="carousel-img" alt="virtualbox">
-                <img src="assets/imgs/logiciel/vscode.webp" class="carousel-img" alt="vscode">
-                <img src="assets/imgs/logiciel/wireguard.webp" class="carousel-img" alt="wireguard">
-                <img src="assets/imgs/logiciel/wireshark.webp" class="carousel-img" alt="wireshark">
-                <img src="assets/imgs/logiciel/xampp.webp" class="carousel-img" alt="xampp">
+                <div id="jeff" class="container">
+                    <div class="stack">
+                        <div class="carousel-track">
+                            <!-- Première série d'images -->
+                            <img src="assets/imgs/logiciel/c-sharp.webp" class="carousel-img" alt="c-sharp">
+                            <img src="assets/imgs/logiciel/Git.webp" class="carousel-img" alt="git">
+                            <img src="assets/imgs/logiciel/Github.webp" class="carousel-img" alt="github">
+                            <img src="assets/imgs/logiciel/Notion.webp" class="carousel-img" alt="notion">
+                            <img src="assets/imgs/logiciel/proxmox.webp" class="carousel-img" alt="proxmox">
+                            <img src="assets/imgs/logiciel/unity.webp" class="carousel-img" alt="unity">
+                            <img src="assets/imgs/logiciel/virtualbox.webp" class="carousel-img" alt="virtualbox">
+                            <img src="assets/imgs/logiciel/vscode.webp" class="carousel-img" alt="vscode">
+                            <img src="assets/imgs/logiciel/wireguard.webp" class="carousel-img" alt="wireguard">
+                            <img src="assets/imgs/logiciel/wireshark.webp" class="carousel-img" alt="wireshark">
+                            <img src="assets/imgs/logiciel/xampp.webp" class="carousel-img" alt="xampp">
+                            <!-- Duplication automatique -->
+                            <img src="assets/imgs/logiciel/c-sharp.webp" class="carousel-img" alt="c-sharp">
+                            <img src="assets/imgs/logiciel/Git.webp" class="carousel-img" alt="git">
+                            <img src="assets/imgs/logiciel/Github.webp" class="carousel-img" alt="github">
+                            <img src="assets/imgs/logiciel/Notion.webp" class="carousel-img" alt="notion">
+                            <img src="assets/imgs/logiciel/proxmox.webp" class="carousel-img" alt="proxmox">
+                            <img src="assets/imgs/logiciel/unity.webp" class="carousel-img" alt="unity">
+                            <img src="assets/imgs/logiciel/virtualbox.webp" class="carousel-img" alt="virtualbox">
+                            <img src="assets/imgs/logiciel/vscode.webp" class="carousel-img" alt="vscode">
+                            <img src="assets/imgs/logiciel/wireguard.webp" class="carousel-img" alt="wireguard">
+                            <img src="assets/imgs/logiciel/wireshark.webp" class="carousel-img" alt="wireshark">
+                            <img src="assets/imgs/logiciel/xampp.webp" class="carousel-img" alt="xampp">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>   
-    </div>      
+                          
+        </div>      
     </section>
     <!-- Fin de la section projet -->
 
@@ -269,11 +276,13 @@
             <h2 class="orange-text-bar text-center">CERTIFICATION🎀</h2>
         </div><br>
         <div class="menu">
+            <div class="row">
             <button onclick="filterCards('TOUS')">TOUS</button>
             <button onclick="filterCards('PIX')">PIX</button>
             <button onclick="filterCards('SOLOLEARN')">SOLOLEARN</button>
             <button onclick="filterCards('CNILL')">CNILL</button>
             <button onclick="filterCards('CISCO')">CISCO</button>
+        </div>
         </div>
         <div class="container">
             <div class="container_cert">
@@ -420,11 +429,11 @@
                             <div class="post-details">
                                 Mes deux attestations de stage réalisées au cours de mes deux années de BTS SIO.
                             </div>
-                            <a href="certification/Attestation%20de%20stage/Attestation%20de%20stage%20SIO1.pdf">
+                            <a href="certification/Attestation%20de%20stage/Attestation%20de%20stage%20SIO1.pdf" target="_blank">
                                 Attestations 1 <img src="assets/imgs/icon/icon-telechargement.webp" class="btn-download" alt="Image de téléchargement">
                             </a>
                             
-                            <a href="certification/Attestation%20de%20stage/Attestation%20de%20stage%20SIO2.pdf">
+                            <a href="certification/Attestation%20de%20stage/Attestation%20de%20stage%20SIO2.pdf" target="_blank">
                                 Attestations 2 <img src="assets/imgs/icon/icon-telechargement.webp" class="btn-download" alt="Image de téléchargement">
                             </a>                            
                         </div>
@@ -485,12 +494,6 @@
         </div>
     </footer> 
     <!-- End of Page Footer -->
-	
-	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-    <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Paris Steevy js -->
     <script src="assets/js/certification.js"></script>
