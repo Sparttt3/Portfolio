@@ -97,12 +97,14 @@
     padding-left: 0px;
     padding-right: 0px;
     margin: 5px;
+    border : 1px solid transparent;
 }
 
 /* Effet au survol */
 .menu button:hover {
     background: #E03000;
     transform: scale(1.05);
+    border-color: var(--white);
 }
 
 /*  Responsive : Empêcher tout débordement sur mobile */

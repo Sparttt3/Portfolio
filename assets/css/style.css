@@ -1107,22 +1107,6 @@ body {
   opacity: 1;
 }
 
-/* Bouton 'Voir la documentation' */
-.btn-doc {
-  background-color: var(--orange);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-/* Changer la couleur au survol du bouton */
-.btn-doc:hover {
-  background-color: var(--orange); /* Couleur plus foncée pour le survol */
-}
 .arrow {
   top: 55%;
   background: var(--orange);

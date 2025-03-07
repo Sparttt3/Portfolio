@@ -3,7 +3,7 @@ const projects = [
     [
         "assets/imgs/Proxmox.jpg",
         "assets/imgs/haproxy-keepalived.jpg",
-        "assets/imgs/candygame.jpg",
+        "assets/imgs/déckédex.jpg",
         "assets/imgs/déckédex.jpg"
     ],
     [
@@ -29,7 +29,7 @@ function updateGrid() {
             <div class="project">
                 <img src="${imgSrc}" alt="${altText}" class="img-project">
                 <div class="overlay">
-                    <button class="btn-doc">Voir la documentation</button>
+                    <button class="btn btn-primary">Voir la documentation</button>
                 </div>
             </div>
         `;
