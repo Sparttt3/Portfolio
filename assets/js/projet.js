@@ -46,5 +46,6 @@ function prevGrid() {
     updateGrid();
 }
 
+
 // Initialisation de la première grille
 updateGrid();

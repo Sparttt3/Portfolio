@@ -1,0 +1,35 @@
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    margin-top: 80px; /* Ajuste selon la hauteur de ta navbar */
+}
+.section-V {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #252533;
+    border: 1px solid #555;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.section-V img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.text {
+    width: 50%;
+    font-size: 1.2em;
+    color: #fff;
+}
+p{
+    margin-top: 15px;
+}
+/* Inverser l'ordre des éléments une fois sur deux */
+.section-V:nth-child(odd) {
+    flex-direction: row-reverse;
+}

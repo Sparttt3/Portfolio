@@ -8,12 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateActiveLink() {
         let scrollPosition = window.scrollY + navbar.offsetHeight;
 
-        // Si l'utilisateur est tout en haut, activer "ACCUEIL"
+        // Si l'utilisateur est tout en haut, activer "ACCUEIL" et cacher la navbar
         if (window.scrollY === 0) {
             navLinks.forEach(nav => nav.classList.remove("nav-link-active"));
             let accueilLink = document.querySelector(`.nav-link[href="#accueil"], .btn[href="#accueil"]`);
             if (accueilLink) accueilLink.classList.add("nav-link-active");
+
+            // Cacher la navbar quand on est dans la section "ACCUEIL"
+            navbar.classList.add('hidden-navbar');
             return;
+        } else {
+            // Réafficher la navbar dès que l'on n'est plus sur la section "ACCUEIL"
+            navbar.classList.remove('hidden-navbar');
         }
 
         sections.forEach(section => {

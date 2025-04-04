@@ -1,123 +1,256 @@
-/* Container principal */
-.menu {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
+#mz-gallery-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-/* Style du conteneur des cartes */
-.container_cert {
-    display: flex;
-    justify-content: center; /* Aligne les éléments à gauche par défaut */
-    gap: 20px; /* Espace entre les cartes */
-    flex-wrap: wrap; /* Permet aux cartes de s'organiser en lignes si nécessaire */
-    transition: justify-content 0.3s ease; /* Transition pour l'alignement */
+#mz-gallery {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  background-color: #252533;
+  background-size: 40px 40px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 0 0 55px;
+  scroll-behavior: smooth;
+  /* firefox scrollbar */
+  scrollbar-color: #e03000  #222;
+  scrollbar-width: auto;
+  animation: background 300s linear infinite;
 }
-@media (max-width: 989px) {
-    .container_cert {
-        gap: 5px; /* Espace entre les cartes */
-        padding: 0px;
-    }
+
+@keyframes background {
+  0% {
+    background-position: -300% 100%;
   }
-
-/* Classe qui centre les cartes lorsqu'elle est ajoutée */
-.container_cert.centered {
-    justify-content: center; /* Centre les cartes horizontalement */
-}
-.cardcert:hover {
-    transform: scale(1.05); /* Agrandit la carte de 5% */
-    transition: transform 0.3s ease; /* Animation fluide */
+  100% {
+    background-position: 100% -300%;
+  }
 }
 
-/* Style des cartes */
-.cardcert {
-    background: #252533;
-    padding: 15px;
-    width: 25%; /* Largeur fixe pour chaque carte */
-    height: auto; /* Hauteur auto pour ajuster la taille selon le contenu */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    display: block; /* Affiche chaque carte normalement */
-    flex: 0 1 auto;
-    opacity: 0; /* Masque par défaut */
-    transition: opacity 0.3s ease; /* Ajoute une transition douce */
-}
-.cardcert.show {
-    opacity: 1; /* Affiche les cartes lorsqu'elles ont la classe show */
+#mz-gallery::-webkit-scrollbar {
+  height: 25px;
 }
 
-/* Style des images des cartes */
-.cardcert img {
-    width: 100%; /* L'image s'adapte à son conteneur */
-    max-width: 80px; /* Limite la taille sur les grands écrans */
-    height: auto; /* Maintient les proportions */
-    aspect-ratio: 1 / 1; /* Assure un format carré */
-    object-fit: cover; /* Évite la déformation */
-    border-radius: 10px; /* Coins arrondis */
+#mz-gallery::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-/* Style des titres des cartes */
-.cardcert h3 {
-    color: white;
-    font-size: clamp(14px, 2vw, 18px); /* Ajuste la taille entre 14px et 18px */
-    margin: 0; /* Supprime les marges par défaut */
-    text-align: center; /* Centre le texte (optionnel) */
-    word-wrap: break-word; /* Évite le débordement sur petits écrans */
+#mz-gallery::-webkit-scrollbar-thumb {
+  background: #666;
 }
 
-/* Style des boutons du menu */
-.menu {
-    display: flex;
-    justify-content: center; /* Centre les boutons */
-    align-items: center;
-    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+#mz-gallery::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#mz-gallery::-webkit-scrollbar-thumb:active {
+  background: #444;
+}
+#mz-gallery figure {
+  position: relative;
+  margin: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: auto;
+  min-height: 100px;
+  margin-right: 60px;
+  scroll-snap-align: start;
+  transition: all 0.3s ease-in-out;
+}
+
+#mz-gallery figure:nth-child(1) {
+  margin-left: 60px;
+}
+
+#mz-gallery figure div {
+  position: absolute;
+  width: 1%;
+  height: 1%;
+  background: transparent;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#mz-gallery figure img {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 5px;
+  opacity: 0.9;
+  filter: brightness(1);
+  outline: 1px solid transparent;
+  outline-offset: -40px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#mz-gallery figure figcaption {
+  position: absolute;
+  color: transparent;
+  font-size: 18pt;
+  line-height: 24pt;
+  font-weight: 500;
+  padding: 0px 20px;
+  text-align: center;
+  width: 40%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: 40px 40px;
+  opacity: 0;
+  border-radius: 100%;
+  pointer-events: none;
+  animation: background 100s linear infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+#mz-gallery figure:hover figcaption {
+  opacity: 0.8;
+  color: white;
+  text-shadow: 1px 1px 3px black, 0px 0px 5px black;
+  transition: all 0.3s ease-in-out;
+}
+
+#mz-gallery figure:hover div {
+  width: 25%;
+  height: 25%;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1145px) {
+  #mz-gallery figure {
+    scroll-snap-align: center;
+  }
+  #mz-gallery {
+    scroll-padding: 0px 0px 0px 0px !important;
+  }
+}
+
+@media (max-width: 610px) {
+  #mz-gallery {
+    max-height: 320px;
+  }
+  #mz-gallery figure {
+    margin-right: 20px;
+  }
+  #mz-gallery figure:nth-child(1) {
+    margin-left: 20px;
+  }
+}
+
+@media (max-height: 425px) {
+  #mz-gallery figure figcaption {
+    font-size: 14pt;
+    line-height: 20pt;
+  }
+}
+
+@media (max-height: 340px) {
+  #mz-gallery {
+    background-size: 30px 30px;
+    scroll-padding: 0 0 0 28px;
+  }
+  #mz-gallery figure {
+    margin-right: 30px;
+  }
+  #mz-gallery figure:nth-child(1) {
+    margin-left: 30px;
+  }
+  #mz-gallery figure figcaption {
+    font-size: 12pt;
+    line-height: 18pt;
+    font-weight: 400;
+    background-size: 30px 30px;
+  }
+}
+
+@media (max-height: 280px) {
+  #mz-gallery::-webkit-scrollbar {
+    height: 20px;
+  }
+  #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:decrement,
+  #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:increment {
+    width: 80px;
+    height: 20px;
+    background-size: 15px;
+  }
+}
+
+@media (max-height: 230px) {
+  #mz-gallery figure figcaption {
+    font-size: 10pt;
+    line-height: 12pt;
+  }
+  #mz-gallery figure:hover figcaption {
+    outline-offset: -10px;
+  }
+  #mz-gallery figure:hover img {
+    outline-offset: 10px;
+  }
+}
+
+@media (max-height: 165px) {
+  #mz-gallery {
+    scroll-padding: 0 0 0 18px;
+    margin: 0px;
+  }
+  #mz-gallery figure {
+    margin-right: 20px;
+  }
+  #mz-gallery figure:nth-child(1) {
+    margin-left: 20px;
+  }
+}
+
+/* touch screen devices */
+
+@media (pointer: coarse) {
+  #mz-gallery * {
+    pointer-events: none;
+  }
+  #mz-gallery::-webkit-scrollbar {
+    height: 35px;
+  }
+  #mz-gallery {
+    scroll-snap-type: unset;
+    scroll-padding: unset;
+    scroll-behavior: unset;
+  }
+  #mz-gallery figure {
+    scroll-snap-align: unset;
+  }
+  #mz-gallery figure figcaption {
     width: 100%;
-}
-
-.menu button {
-    background: #252533;
-    border: none;
-    padding: 0.65rem 1rem;
+    height: 30%;
+    bottom: 0;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    transition: background 0.3s ease, transform 0.2s ease;
-    
-    /* Empêcher le débordement */
-    max-width: 90%; /* Empêche d'être trop large */
-    min-width: 120px; /* Garde une taille minimale */
-    width: auto; /* S'adapte au texte */
-    text-align: center;
-    white-space: nowrap; /* Évite le retour à la ligne */
-    overflow: hidden;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 5px;
-    border : 1px solid transparent;
+    animation: unset;
+    border-radius: 0;
+    padding: 0px 15px;
+    border-top: 1px solid lawngreen;
+  }
 }
-
-/* Effet au survol */
-.menu button:hover {
-    background: #E03000;
-    transform: scale(1.05);
-    border-color: var(--white);
-}
-
-/*  Responsive : Empêcher tout débordement sur mobile */
-@media (max-width: 600px) {
-    .menu {
-        flex-direction: column; /* Place les boutons en colonne */
-    }
-
-    .menu button {
-        font-size: 14px;
-        padding: 0.5rem 0.8rem;
-        width: 90%; /* Utilise au maximum 90% de l'écran */
-        max-width: 250px; /* Empêche un bouton trop large */
-    }
-}
-
