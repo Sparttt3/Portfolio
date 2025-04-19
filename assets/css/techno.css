@@ -1,9 +1,10 @@
-
-.container {
+.containerv {
     width: 80%;
     margin: auto;
     padding: 20px 0;
     margin-top: 80px; /* Ajuste selon la hauteur de ta navbar */
+    max-width : 1540px;
+    z-index: 9999;
 }
 .section-V {
     display: flex;
@@ -17,12 +18,13 @@
 }
 
 .section-V img {
-    width: 40%;
+    width: 70%;
     border-radius: 10px;
+    margin-left: 15%;
 }
 
 .text {
-    width: 50%;
+    width: 100%;
     font-size: 1.2em;
     color: #fff;
 }
@@ -32,4 +34,7 @@ p{
 /* Inverser l'ordre des éléments une fois sur deux */
 .section-V:nth-child(odd) {
     flex-direction: row-reverse;
+}
+.section-V.intro {
+    flex-direction: row; /* Réinitialiser la direction du flex */
 }

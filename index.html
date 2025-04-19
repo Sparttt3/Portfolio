@@ -38,7 +38,10 @@
                     <a class="nav-link" href="#certification">CERTIFICATION</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#bts-sio">BTS-SIO</a>
+                    <a class="nav-link" href="#ÉPREUVE">ÉPREUVE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#BTS-SIO">BTS-SIO</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">CONTACT</a>
@@ -93,6 +96,7 @@
 
     <!-- A propos de moi section -->
     <section id="about" class="section mt-3">
+        <div id="arrowhead-down" class="arrowhead">&#8595;</div>
         <div class="text-center">
             <h2 class="orange-text-bar text-center">À PROPOS DE MOI 👩‍💻</h2></div><br>
         <div class="container mt-5">
@@ -171,11 +175,6 @@
                         <i><strong>27/05/2024 - 21/06/2024</strong></i><br>
                         <p>Auto-hébergement de <strong>RustDesk</strong> sur <strong>Proxmox</strong>, avec un accès à <strong>TrueNAS</strong>.</p>
                     </li>
-                    <li class="parcours-text">
-                        <h4><strong>Saisonnier : Hyper U</strong></h4>
-                        <i><strong>Juillet-Août 2023</strong></i><br>
-                        <p>Mise en rayon</p>
-                    </li>
                 </ul>
             </div>
     
@@ -186,14 +185,16 @@
                 </div><br>
                 <ul class="parcours-list">
                     <li class="parcours-text">
-                        <h4><strong>Lycée Édouard Gand Amiens</strong></h4>
-                        <i><strong>BTS SIO OPTION SISR (en cours)</strong></i><br>
-                        <p>J'ai poursuivi mes études au Lycée Édouard Gand à Amiens en BTS SIO, option SISR.</p>
+                        <h4><strong>Administrateur Système et Réseau formation RNCP NIVEAU 6 – BAC +4 - ENI Ecole Informatique - 2025/2029</strong></h4>
+                        <p>Administrateur Système et Réseau, Reconnu par l’État Niveau 6 (Niveau Bac +4) RNCP</p>
                     </li>
                     <li class="parcours-text">
-                        <h4><strong>Lycée Boucher De Perthes Abbeville</strong></h4>
-                        <i><strong>Bac Pro MCV</strong></i><br>
-                        <p>Formation aux métiers du Commerce et de la vente, avec des compétences en <strong>communication</strong> et <strong>gestion de la relation client</strong>, et obtention du <strong>diplôme national</strong> avec mention.</p>
+                        <h4><strong>BTS SERVICES INFORMATIQUES AUX ORGANISATIONS - LYCÉE EDOUARD GAND (AMIENS) - 2023/2025</strong></h4>
+                        <p>Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</p>
+                    </li>
+                    <li class="parcours-text">
+                        <h4><strong> Bac Pro MCV - Lycée Boucher De Perthes (Abbeville) - 2019/2023</strong></h4>
+                        <p>Option A animation et gestion de l'espace commercial</p>
                     </li>
                     <li class="parcours-text">
                         <h4><strong>Collège Ponthieu Abbeville</strong></h4>
@@ -217,34 +218,44 @@
                     <div class="project">
                         <img src="assets/imgs/Proxmox.jpg" alt="Proxmox" class="img-project">
                         <div class="overlay">
-                            <button class="btn btn-primary">Voir la documentation</button>
+                            <a href="documentation/documentation_projet_proxmox.pdf" target="_blank" class="btn btn-primary">
+                                Voireee la documentation
+                            </a>
                         </div>
                     </div>
                     <div class="project">
                         <img src="assets/imgs/haproxy-keepalived.jpg" alt="Projet Haproxy-Keepalived" class="img-project">
                         <div class="overlay">
-                            <button class="btn btn-primary">Voir la documentation</button>
+                            <a href="documentation/documentation_projet_proxmox3.pdf" target="_blank" class="btn btn-primary">
+                                Voireee la documentation
+                            </a>
                         </div>
                     </div>
                     <div class="project">
                         <img src="assets/imgs/déckédex.jpg" alt="Projet Deckédex" class="img-project">
                         <div class="overlay">
-                            <button class="btn btn-primary">Voir la documentation</button>
+                            <a href="documentation/documentation_projet_proxmox2.pdf" target="_blank" class="btn btn-primary">
+                                Voireee la documentation
+                            </a>
                         </div>
                     </div>
                     <div class="project">
                         <img src="assets/imgs/déckédex.jpg" alt="Projet Deckédex" class="img-project">
                         <div class="overlay">
-                            <button class="btn btn-primary">Voir la documentation</button>
+                            <a href="documentation/documentation_projet_proxmox1.pdf" target="_blank" class="btn btn-primary">
+                                Voireee la documentation
+                            </a>
                         </div>
                     </div>
                 </div>
             </div><br>
             <div class="arrow arrow-left" onclick="prevGrid()">&#x2B05;</div>
             <div class="arrow arrow-right" onclick="nextGrid()">&#x27A1;</div>
-        </div><br>
+        </div><br><br><br><br>
         <div class="text-center">
-            <h2><u>Mes outils / logiciels ⚙️</u></h2>
+            <div class="container">
+                <h2 class="orange-text-bar text-center">Certification🎀</h2>
+            </div><br>
             <div class="row">
                 <div id="jeff" class="container">
                     <div class="stack">
@@ -276,8 +287,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-                          
+            </div>       
         </div>      
     </section>
     <!-- Fin de la section projet -->
@@ -291,36 +301,29 @@
             <div id="mz-gallery-container">
                 <div id="mz-gallery">
                     <figure>
-                        <img src="assets/imgs/cisco.jpg" alt="Statue of Liberty" width="256" height="156">
+                        <a href="certification/SECNUM.pdf" target="_blank">
+                            <img src="assets/imgs/secnum.jpg" alt="PIX" width="256" height="156"></a>
                         <figcaption>voir</figcaption>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
                     </figure>
                     <figure>
-                        <img src="assets/imgs/cisco.jpg" alt="Statue of Liberty" width="256" height="156">
+                        <a href="certification/PIX.pdf" target="_blank">
+                            <img src="assets/imgs/PIX.jpg" alt="PIX" width="256" height="156"></a>
                         <figcaption>voir</figcaption>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
                     </figure>
                     <figure>
-                        <img src="assets/imgs/cisco.jpg" alt="Statue of Liberty" width="256" height="156">
+                        <a href="certification/CNIL.pdf" target="_blank">
+                            <img src="assets/imgs/CNIL.jpg" alt="CNIL" width="256" height="156"></a>
                         <figcaption>voir</figcaption>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
                     </figure>
                     <figure>
-                        <img src="assets/imgs/cisco.jpg" alt="Statue of Liberty" width="256" height="156">
+                        <a href="certification/CISCO.pdf" target="_blank">
+                            <img src="assets/imgs/CISCO.jpg" alt="CISCO" width="256" height="156"></a>
                         <figcaption>voir</figcaption>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    </figure>
+                    <figure>
+                        <a href="certification/SOLOLEARN.pdf" target="_blank">
+                            <img src="assets/imgs/sololearn.jpg" alt="sololearn" width="256" height="156"></a>
+                        <figcaption>voir</figcaption>
                     </figure>
                 </div>
             </div>
@@ -328,23 +331,26 @@
     </section>
     <!-- Fin de la Certification -->     
 
-    <!-- Bts sio Section -->
-    <section id="bts-sio" class="section">
+    <!-- Epreuve Section -->
+    <section id="ÉPREUVE" class="section">
         <div class="container text-center">
             <div class="text-center">
-                <h2 class="orange-text-bar text-center">BTS-SIO</h2>
+                <h2 class="orange-text-bar text-center">ÉPREUVE</h2>
             </div><br>
-            <p class="mb-5 pb-4">Le brevet de technicien supérieur services informatiques aux organisations (BTS SIO) s’adresse à ceux qui souhaitent se former en deux ans aux métiers d’administrateur réseau ou de développeur pour intégrer directement le marché du travail ou continuer des études dans le domaine de l’informatique..</p>
-            <div class="row text-left">
+            <p class="mb-5 pb-4"><strong>E4</strong> Cette épreuve vise à évaluer chez la personne candidate l’acquisition des compétences décrites dans le bloc de compétences « Support et mise à disposition de services informatiques.</p><br>
+            <p class="mb-5 pb-4"><strong>E5</strong> Cette épreuve vise à évaluer chez la personne candidate l’acquisition des compétences décrites dans le bloc de compétences « Administration des systèmes et des réseaux » propre à l’option « Solutions d’infrastructure, systèmes et réseaux »</p>
+            <div class="row">
                 <div class="col-md-4">
                     <div class="card border mb-4">
                         <img src="assets/imgs/Veille%20Technologique.jpg" class="card-img-top w-100" alt="icon représente la réalité virtuelle.">
                         <div class="card-body">
                             <h5 class="card-title">Veille technologique</h5>
                             <div class="post-details">
-                                Sujet « La réalité virtuelle ».
+                                <strong>E5</strong>Compétences acquises durant mes 2 années de BTS-SIO.
                             </div>
-                            <a>En voir plus..</a>
+                            <a href="Veille-technologique.html" target="_blank">
+                                En voir plus..
+                            </a>  
                         </div>
                     </div>
                 </div>
@@ -354,7 +360,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Tableau de synthèse</h5>
                             <div class="post-details">
-                                Compétences acquises durant mes 2 années de BTS-SIO.
+                                <strong>E4</strong> Compétences acquises durant mes 2 années de BTS-SIO.
                             </div>
                             <a>En voir plus..</a>
                         </div>
@@ -366,9 +372,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Attestations de stage</h5>
                             <div class="post-details">
-                                Mes deux attestations de stage réalisées au cours de mes deux années de BTS SIO.
+                                <strong>E4</strong>Mes deux stages réalisés durant le BTS SIO.
                             </div>
-                            <a href="certification/Attestation de stage/Attestation%20de%20stage%20Paris%20Steevy.pdf" target="_blank">
+                            <a href="certification/Attestation%20de%20stage.pdf" target="_blank">
                                 Télécharger <img src="assets/imgs/icon/icon-telechargement.webp" class="btn-download" alt="Image de téléchargement">
                             </a>                      
                         </div>
@@ -377,8 +383,48 @@
             </div>
         </div>
     </section>
-    <!-- Fin de la section bts sio -->
-
+    <!-- Fin de la section Epreuve -->
+    <!-- BTS-SIO Section -->
+    <section id="BTS-SIO" class="section">
+        <div class="container text-center">
+            <div class="text-center">
+                <h2 class="orange-text-bar text-center">BTS-SIO</h2>
+            </div><br>
+            <p class="mb-5 pb-4">Je vous présente à présent la formation que j’ai suivie et au sein de laquelle j’ai évolué pendant deux ans : le Brevet de Technicien Supérieur Services Informatiques aux Organisations (BTS SIO). Ce diplôme s’adresse à celles et ceux qui souhaitent se former en deux ans aux métiers de l’administration réseau ou du développement. Il permet d’intégrer directement le marché du travail ou de poursuivre des études dans le domaine de l’informatique.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/sisr.png" class="card-img-top w-100" alt="SISR image.">
+                        <div class="card-body">
+                            <h5 class="card-title">Option SISR</h5>
+                            <div class="post-details">
+                                option A solutions d'infrastructure, systèmes et réseaux (SIO SISR).
+                            </div>
+                            <a href="Veille-technologique.html" target="_blank">
+                                En voir plus..
+                            </a>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border mb-4">
+                        <img src="assets/imgs/slam.jpg" class="card-img-top w-100" alt="SLAM image">
+                        <div class="card-body">
+                            <h5 class="card-title">Option Slam</h5>
+                            <div class="post-details">
+                                option B solutions logicielles et applications métiers (SIO SLAM)
+                            </div>
+                            <a href="certification/Attestation%20de%20stage.pdf" target="_blank">
+                                Télécharger <img src="assets/imgs/icon/icon-telechargement.webp" class="btn-download" alt="Image de téléchargement">
+                            </a>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin de la section BTS-SIO -->
+     
 <!-- Contact Section -->
 <section id="contact" class="section">    
     <div class="container text-center">
@@ -435,5 +481,6 @@
     <script src="assets/js/toggler.js"></script>
     <script src="assets/js/scroll.js"></script>
     <script src="assets/js/projet.js"></script>
+    <script src="assets/js/arrow.js"></script>
 </body>
 </html>
