@@ -1088,7 +1088,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
   grid-template-rows: repeat(2, 1fr); /* 2 lignes égales */
-  gap: 10px;
+  gap: 20px;
   background: var(--gray);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -1103,11 +1103,9 @@ body {
 
 /* Style des projets */
 .project {
-  border : 1px solid #555;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
   position: relative; /* Nécessaire pour positionner l'overlay */
   overflow: hidden; /* Cache l'overlay si non visible */
   transition: transform 0.3s;
@@ -1120,10 +1118,9 @@ body {
 
 /* Style de l'image */
 .img-project {
-  width: 70%;
-  height: 100%; 
-  object-fit: cover; 
-  border-radius: 8px;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* L'overlay qui apparaît au survol */
@@ -1139,7 +1136,6 @@ body {
   align-items: center;
   opacity: 0; /* Caché par défaut */
   transition: opacity 0.3s ease; /* Transition fluide */
-  border-radius: 8px;
 }
 
 /* Affichage de l'overlay au survol */

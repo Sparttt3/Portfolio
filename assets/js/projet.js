@@ -3,26 +3,26 @@ let currentIndex = 0;
 const projects = [
     [
         {
-            src: "assets/imgs/Proxmox.jpg",
+            src: "assets/imgs/Proxmox.png",
             doc: "documentation/documentation_projet_proxmox.pdf"
         },
         {
-            src: "assets/imgs/haproxy-keepalived.jpg",
-            doc: "documentation/documentation_projet_proxmox3.pdf"
+            src: "assets/imgs/SSL.png",
+            doc: "documentation/SSL.pdf"
         },
         {
-            src: "assets/imgs/déckédex.jpg",
-            doc: "documentation/documentation_projet_proxmox2.pdf"
+            src: "assets/imgs/haproxy.png",
+            doc: "documentation/Haproxy.pdf"
         },
         {
-            src: "assets/imgs/déckédex.jpg",
-            doc: "documentation/documentation_projet_proxmox1.pdf"
+            src: "assets/imgs/ad.png",
+            doc: "documentation/Windows-Server-et-Active-Directory.pdf"
         }
     ],
     [
         {
-            src: "assets/imgs/projet5.jpg",
-            doc: "documentation/documentation_projet5.pdf"
+            src: "assets/imgs/déckédex.png",
+            doc: "documentation/deckedex.pdf"
         },
         {
             src: "assets/imgs/projet6.jpg",
@@ -35,24 +35,6 @@ const projects = [
         {
             src: "assets/imgs/projet8.jpg",
             doc: "documentation/documentation_projet8.pdf"
-        }
-    ],
-    [
-        {
-            src: "assets/imgs/projet9.jpg",
-            doc: "documentation/documentation_projet9.pdf"
-        },
-        {
-            src: "assets/imgs/projet10.jpg",
-            doc: "documentation/documentation_projet10.pdf"
-        },
-        {
-            src: "assets/imgs/projet11.jpg",
-            doc: "documentation/documentation_projet11.pdf"
-        },
-        {
-            src: "assets/imgs/projet12.jpg",
-            doc: "documentation/documentation_projet12.pdf"
         }
     ]
 ];
