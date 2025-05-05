@@ -23,18 +23,6 @@ const projects = [
         {
             src: "assets/imgs/déckédex.png",
             doc: "documentation/deckedex.pdf"
-        },
-        {
-            src: "assets/imgs/projet6.jpg",
-            doc: "documentation/documentation_projet6.pdf"
-        },
-        {
-            src: "assets/imgs/projet7.jpg",
-            doc: "documentation/documentation_projet7.pdf"
-        },
-        {
-            src: "assets/imgs/projet8.jpg",
-            doc: "documentation/documentation_projet8.pdf"
         }
     ]
 ];
